@@ -31,6 +31,8 @@ jobs:
       - name: Lancer la veille
         env:
           NTFY_TOPIC_URL: ${{ secrets.NTFY_TOPIC_URL }}
+          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
           TEST_NOTIFICATION: ${{ github.event.inputs.test_notification }}
         run: python scripts/main.py
 
