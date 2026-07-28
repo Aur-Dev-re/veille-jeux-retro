@@ -7,6 +7,11 @@ on:
   schedule:
     - cron: "0 */2 * * *"
   workflow_dispatch:
+    inputs:
+      test_notification:
+        description: "Envoyer une notification de test ntfy (vérification de bout en bout)"
+        type: boolean
+        default: false
 
 jobs:
   veille:
@@ -26,6 +31,7 @@ jobs:
       - name: Lancer la veille
         env:
           NTFY_TOPIC_URL: ${{ secrets.NTFY_TOPIC_URL }}
+          TEST_NOTIFICATION: ${{ github.event.inputs.test_notification }}
         run: python scripts/main.py
 
       - name: Sauvegarder l'état de la veille (annonces déjà vues)
