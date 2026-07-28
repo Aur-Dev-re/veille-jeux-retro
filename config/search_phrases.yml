@@ -1,0 +1,202 @@
+# ==================================================================
+# Champ lexical de la veille — RECHERCHES
+# ==================================================================
+# Ce fichier est configurable : tu peux ajouter, modifier ou supprimer des
+# entrées librement, sans toucher au code. Une entrée par ligne, précédée d'un tiret.
+#
+# Organisation en 3 groupes (les recherches vagues et contextuelles sont
+# prioritaires, car elles trouvent les annonces que les autres acheteurs
+# manquent) :
+#   1. recherches_precises      -> noms de consoles / jeux / licences
+#   2. recherches_vagues        -> annonces mal décrites, vocabulaire flou
+#   3. recherches_contextuelles -> vocabulaire d'un vendeur qui ne connaît pas
+#                                  l'objet, s'en débarrasse, l'a retrouvé, etc.
+# ==================================================================
+
+recherches_precises:
+  # Liste de départ, à compléter au fil du temps (marques, consoles, portables,
+  # familles de jeux). Ne pas se limiter à cette liste.
+  consoles_et_marques:
+    - Nintendo 64
+    - PlayStation 2
+    - PlayStation 1
+    - PlayStation 3
+    - GameCube
+    - Dreamcast
+    - Saturn
+    - Mega Drive
+    - Master System
+    - Super Nintendo
+    - NES
+    - Game Boy
+    - Game Boy Color
+    - Game Boy Advance
+    - Nintendo DS
+    - Nintendo 3DS
+    - PSP
+    - PS Vita
+    - Xbox
+    - Xbox 360
+    - Atari 2600
+    - Atari ST
+    - Amiga
+    - Neo Geo
+    - Wii
+    - Wii U
+
+  accessoires:
+    - manette
+    - manettes
+    - carte mémoire
+    - câble péritel
+    - adaptateur secteur
+    - chargeur console
+    - guide de jeu
+    - édition collector
+
+recherches_vagues:
+  # Annonces mal décrites, titres flous, sans nom précis de console/jeu.
+  - vieille console
+  - console des enfants
+  - lot à débarrasser
+  - anciennes cassettes Nintendo
+  - jeux vidéo anciens
+  - matériel de jeu à récupérer
+  - jeux et consoles anciens
+  - matériel jeux vidéo
+  - vieux jeux vidéo
+  - vieilles cassettes de jeux
+
+recherches_contextuelles:
+  # --------------------------------------------------------------
+  # A. Objet trouvé ou redécouvert
+  # --------------------------------------------------------------
+  objet_trouve_ou_redecouvert:
+    - trouvé dans un placard
+    - retrouvé dans un placard
+    - trouvé au fond du placard
+    - retrouvé au fond du placard
+    - sorti du placard
+    - trouvé dans une armoire
+    - retrouvé dans une armoire
+    - trouvé dans le grenier
+    - retrouvé dans le grenier
+    - trouvé au grenier
+    - retrouvé au grenier
+    - sorti du grenier
+    - jeux du grenier
+    - console du grenier
+    - trouvé dans une cave
+    - retrouvé dans une cave
+    - jeux de cave
+    - console de cave
+    - trouvé dans le garage
+    - retrouvé dans le garage
+    - trouvé dans un carton
+    - retrouvé dans un carton
+    - vieux carton
+    - ancien carton
+    - carton oublié
+    - carton stocké
+    - retrouvé en rangeant
+    - trouvé en rangeant
+    - retrouvé pendant un déménagement
+    - trouvé pendant un déménagement
+    - fond de tiroir
+    - retrouvé dans un tiroir
+    - ancien stock personnel
+    - resté stocké
+    - resté rangé
+    - pas utilisé depuis longtemps
+    - jamais utilisé depuis longtemps
+    - appartenait à mes enfants
+    - appartenait à mon fils
+    - appartenait à ma fille
+    - appartenait à mon frère
+    - appartenait à mon conjoint
+    - appartenait à mes parents
+    - souvenirs d'enfance
+
+  # --------------------------------------------------------------
+  # B. Cartons, lots et ensembles non triés
+  # --------------------------------------------------------------
+  cartons_lots_ensembles_non_tries:
+    - carton de jeux
+    - carton de jeu
+    - carton jeux vidéo
+    - caisse de jeux
+    - caisse de consoles
+    - sac de jeux
+    - sac de consoles
+    - lot de jeux
+    - lot jeux vidéo
+    - lot console
+    - lot consoles
+    - lot gaming
+    - lot Nintendo
+    - lot PlayStation
+    - lot Xbox
+    - lot Sega
+    - lot rétro
+    - lot ancien
+    - lot à trier
+    - lot non trié
+    - ensemble de jeux
+    - ensemble consoles
+    - plusieurs jeux
+    - plusieurs consoles
+    - collection jeux vidéo
+    - ancienne collection
+    - fond de collection
+    - reste de collection
+    - stock de jeux
+    - stock console
+    - tout le carton
+    - tout le lot
+    - vendu en lot
+    - vente du tout
+    - lot indivisible
+    - lot complet
+    - matériel divers
+    - accessoires divers
+    - jeux divers
+    - consoles diverses
+    - assortiment de jeux
+    - mélange de jeux
+    - plusieurs générations de consoles
+
+  # --------------------------------------------------------------
+  # C. Vendeur qui ne connaît pas l'objet
+  # --------------------------------------------------------------
+  vendeur_qui_ne_connait_pas_objet:
+    - je ne sais pas
+    - je ne connais pas
+    - je n'y connais rien
+    - je ne m'y connais pas
+    - aucune idée
+    - je ne sais pas ce que c'est
+    - je ne connais pas le modèle
+    - je ne connais pas la référence
+    - je ne connais pas la valeur
+    - je ne sais pas combien ça vaut
+    - je ne sais pas si ça marche
+    - je ne sais pas si cela fonctionne
+    - pas testé
+    - non testé
+    - impossible à tester
+    - je n'ai pas le matériel pour tester
+    - je n'ai plus la console
+    - je n'ai plus les câbles
+    - vendu comme sur les photos
+    - voir photos
+    - tout est sur les photos
+    - je vends pour quelqu'un
+    - je vends pour mes parents
+    - je vends pour mon fils
+    - je vends pour mon conjoint
+    - je mets en vente sans connaître
+    - connaisseur saura
+    - pour connaisseur
+    - aucune garantie
+    - je ne connais pas ces jeux
+    - je ne joue pas aux jeux
