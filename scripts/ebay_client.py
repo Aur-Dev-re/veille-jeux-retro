@@ -95,11 +95,18 @@ def rechercher(mot_cle: str, marketplace: str = "EBAY_FR", limite: int = 20) -> 
     annonces = []
     for item in donnees.get("itemSummaries", []):
         prix = item.get("price", {})
+        valeur_prix = prix.get("value")
+        try:
+            prix_nombre = float(valeur_prix) if valeur_prix is not None else None
+        except (TypeError, ValueError):
+            prix_nombre = None
+
         annonces.append(
             {
                 "id": item.get("itemId"),
                 "titre": item.get("title"),
-                "prix": prix.get("value"),
+                "prix": valeur_prix,
+                "prix_nombre": prix_nombre,
                 "devise": prix.get("currency"),
                 "lien": item.get("itemWebUrl"),
                 "etat": item.get("condition"),

@@ -21,6 +21,7 @@ from notifier import envoyer_notification  # noqa: E402
 
 CONFIG_PATH = RACINE / "config" / "search_phrases.yml"
 ANNONCES_VUES_PATH = RACINE / "data" / "seen_listings.json"
+REFERENCE_PRIX_PATH = RACINE / "data" / "reference_prix.json"
 ENV_LOCAL_PATH = RACINE / ".env"
 
 # Petite pause entre deux recherches, pour rester raisonnable vis-à-vis d'eBay.
@@ -44,6 +45,20 @@ NOMS_MARKETPLACES = {
     "EBAY_GB": "Royaume-Uni",
 }
 MARKETPLACES_SUPPLEMENTAIRES = ["EBAY_DE", "EBAY_ES", "EBAY_IT", "EBAY_BE", "EBAY_GB"]
+
+# Filtre "bonne affaire" : ne s'applique qu'aux recherches précises de noms de
+# consoles/marques (une moyenne de prix n'a pas de sens pour une recherche vague
+# ou contextuelle, qui peut désigner un simple jeu ou tout un lot hétéroclite).
+#
+# eBay ne donne accès aux prix de vente réels qu'aux gros partenaires approuvés
+# (Marketplace Insights API, accès restreint) : impossible à obtenir pour ce
+# projet. La "moyenne" ci-dessous est donc calculée par le programme lui-même,
+# à partir des prix DEMANDÉS sur les annonces en cours qu'il observe au fil du
+# temps (moyenne mobile) — une approximation qui s'affine progressivement,
+# pas un vrai historique de ventes.
+SEUIL_REDUCTION_PRIX = 0.20  # notifie seulement si le prix est au moins 20% sous la moyenne
+NOMBRE_MIN_ECHANTILLONS_PRIX = 5  # annonces à observer avant de faire confiance à la moyenne
+ALPHA_MOYENNE_MOBILE = 0.15  # poids donné à chaque nouvelle observation dans la moyenne
 
 
 def charger_env_local(chemin: Path) -> None:
@@ -101,6 +116,38 @@ def sauvegarder_annonces_vues(chemin: Path, donnees: dict) -> None:
         json.dump(donnees, fichier, ensure_ascii=False, indent=2, sort_keys=True)
 
 
+def charger_reference_prix(chemin: Path) -> dict:
+    if not chemin.exists():
+        return {}
+    with chemin.open("r", encoding="utf-8") as fichier:
+        return json.load(fichier)
+
+
+def sauvegarder_reference_prix(chemin: Path, donnees: dict) -> None:
+    with chemin.open("w", encoding="utf-8") as fichier:
+        json.dump(donnees, fichier, ensure_ascii=False, indent=2, sort_keys=True)
+
+
+def cle_reference_prix(marketplace: str, mot_cle: str) -> str:
+    return f"{marketplace}::{mot_cle}"
+
+
+def mettre_a_jour_moyenne_prix(reference_prix: dict, cle: str, prix: float) -> None:
+    entree = reference_prix.get(cle)
+    if entree is None:
+        reference_prix[cle] = {"moyenne": prix, "nombre": 1}
+        return
+    nouvelle_moyenne = entree["moyenne"] + ALPHA_MOYENNE_MOBILE * (prix - entree["moyenne"])
+    reference_prix[cle] = {"moyenne": nouvelle_moyenne, "nombre": entree["nombre"] + 1}
+
+
+def est_une_bonne_affaire(reference_prix: dict, cle: str, prix: float) -> bool:
+    entree = reference_prix.get(cle)
+    if not entree or entree["nombre"] < NOMBRE_MIN_ECHANTILLONS_PRIX:
+        return False
+    return prix <= entree["moyenne"] * (1 - SEUIL_REDUCTION_PRIX)
+
+
 def etat_ebay(annonces_vues: dict) -> tuple[set, set]:
     """Récupère (annonces déjà vues, marketplaces déjà initialisés) pour eBay.
 
@@ -125,9 +172,10 @@ def envoyer_notification_prudente(**kwargs) -> None:
     time.sleep(PAUSE_ENTRE_NOTIFICATIONS_SECONDES)
 
 
-def executer_veille_ebay(annonces_vues: dict) -> None:
+def executer_veille_ebay(annonces_vues: dict, reference_prix: dict) -> None:
     recherches_completes = charger_recherches(CONFIG_PATH)
     consoles_et_marques = charger_consoles_et_marques(CONFIG_PATH)
+    mots_cles_avec_filtre_prix = set(consoles_et_marques)
 
     vues_ebay, marketplaces_initialisees = etat_ebay(annonces_vues)
 
@@ -141,16 +189,39 @@ def executer_veille_ebay(annonces_vues: dict) -> None:
 
     def traiter_recherche(mot_cle: str, marketplace: str, premiere_fois_marketplace: bool) -> None:
         annonces = rechercher(mot_cle, marketplace=marketplace)
+        filtrer_par_prix = mot_cle in mots_cles_avec_filtre_prix
+        cle_prix = cle_reference_prix(marketplace, mot_cle)
+
+        if filtrer_par_prix:
+            # On affine la moyenne avec TOUTES les annonces observées (pas
+            # seulement les nouvelles), pour qu'elle reflète les prix
+            # actuellement demandés sur le marché.
+            for annonce in annonces:
+                if annonce["prix_nombre"] is not None:
+                    mettre_a_jour_moyenne_prix(reference_prix, cle_prix, annonce["prix_nombre"])
+
         nouvelles = [a for a in annonces if a["id"] and a["id"] not in vues_ebay]
 
         for annonce in nouvelles:
             if not premiere_fois_marketplace:
-                prix = f"{annonce['prix']} {annonce['devise']}" if annonce["prix"] else "prix non précisé"
-                envoyer_notification_prudente(
-                    titre=f"eBay {NOMS_MARKETPLACES.get(marketplace, marketplace)} : {mot_cle}",
-                    message=f"{annonce['titre']} — {prix}",
-                    lien=annonce["lien"],
-                )
+                doit_notifier = True
+                complement = ""
+
+                if filtrer_par_prix:
+                    doit_notifier = annonce["prix_nombre"] is not None and est_une_bonne_affaire(
+                        reference_prix, cle_prix, annonce["prix_nombre"]
+                    )
+                    if doit_notifier:
+                        moyenne = reference_prix[cle_prix]["moyenne"]
+                        complement = f" (moyenne habituelle : {moyenne:.2f} {annonce['devise']})"
+
+                if doit_notifier:
+                    prix = f"{annonce['prix']} {annonce['devise']}" if annonce["prix"] else "prix non précisé"
+                    envoyer_notification_prudente(
+                        titre=f"eBay {NOMS_MARKETPLACES.get(marketplace, marketplace)} : {mot_cle}",
+                        message=f"{annonce['titre']} — {prix}{complement}",
+                        lien=annonce["lien"],
+                    )
             vues_ebay.add(annonce["id"])
 
         time.sleep(PAUSE_ENTRE_RECHERCHES_SECONDES)
@@ -197,9 +268,10 @@ def main() -> None:
         raise FileNotFoundError(f"Fichier de configuration introuvable : {CONFIG_PATH}")
 
     annonces_vues = charger_annonces_vues(ANNONCES_VUES_PATH)
+    reference_prix = charger_reference_prix(REFERENCE_PRIX_PATH)
 
     try:
-        executer_veille_ebay(annonces_vues)
+        executer_veille_ebay(annonces_vues, reference_prix)
     except Exception as erreur:  # noqa: BLE001
         # On ne laisse jamais un souci (clés manquantes, erreur réseau, quota
         # eBay dépassé...) faire perdre tout le travail déjà accompli : ce qui
@@ -207,6 +279,7 @@ def main() -> None:
         print(f"[eBay] Veille eBay interrompue par une erreur, mais l'état déjà trouvé sera sauvegardé : {erreur}")
     finally:
         sauvegarder_annonces_vues(ANNONCES_VUES_PATH, annonces_vues)
+        sauvegarder_reference_prix(REFERENCE_PRIX_PATH, reference_prix)
 
     # Test ponctuel de bout en bout (Secret GitHub -> Actions -> ntfy).
     # Ne se déclenche que si on le demande explicitement (bouton "Run workflow"

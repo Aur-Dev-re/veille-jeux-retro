@@ -36,11 +36,11 @@ jobs:
           TEST_NOTIFICATION: ${{ github.event.inputs.test_notification }}
         run: python scripts/main.py
 
-      - name: Sauvegarder l'état de la veille (annonces déjà vues)
+      - name: Sauvegarder l'état de la veille (annonces déjà vues, prix de référence)
         run: |
           git config user.name "Veille Jeux Rétro (bot)"
           git config user.email "actions@users.noreply.github.com"
-          git add data/seen_listings.json
+          git add data/seen_listings.json data/reference_prix.json
           if ! git diff --cached --quiet; then
             git commit -m "Mise à jour automatique de l'état de la veille"
             git push
