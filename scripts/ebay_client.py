@@ -13,15 +13,35 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+from pathlib import Path
+
+import yaml
 
 OAUTH_URL = "https://api.ebay.com/identity/v1/oauth2/token"
 SEARCH_URL = "https://api.ebay.com/buy/browse/v1/item_summary/search"
+ITEM_URL = "https://api.ebay.com/buy/browse/v1/item"
 SCOPE = "https://api.ebay.com/oauth/api_scope"
 
-# Catégorie eBay "Video Games & Consoles", commune à tous les marketplaces
-# eBay utilisés par ce projet. Sans elle, une recherche par mot-clé simple
-# remonte aussi des articles hors-sujet (ex: un t-shirt à motif Nintendo).
-CATEGORIE_JEUX_VIDEO = "1249"
+# Catégorie de repli si config/categories_ebay.yml est absent ou vide :
+# "Video Games & Consoles", commune à tous les marketplaces eBay utilisés ici.
+CATEGORIE_JEUX_VIDEO_DEFAUT = "1249"
+CATEGORIES_CONFIG_PATH = Path(__file__).resolve().parent.parent / "config" / "categories_ebay.yml"
+
+
+def _categories_actives() -> str:
+    """Lit config/categories_ebay.yml et retourne les IDs actifs, séparés par une virgule."""
+    try:
+        with CATEGORIES_CONFIG_PATH.open("r", encoding="utf-8") as fichier:
+            donnees = yaml.safe_load(fichier) or {}
+    except FileNotFoundError:
+        return CATEGORIE_JEUX_VIDEO_DEFAUT
+
+    ids = [
+        str(categorie["id"]).strip()
+        for categorie in donnees.get("categories", [])
+        if categorie.get("actif") and str(categorie.get("id", "")).strip()
+    ]
+    return ",".join(ids) if ids else CATEGORIE_JEUX_VIDEO_DEFAUT
 
 # Jeton d'accès mis en cache en mémoire le temps de l'exécution du script
 # (il reste valide ~2h, largement plus que la durée d'une exécution).
@@ -75,7 +95,7 @@ def rechercher(mot_cle: str, marketplace: str = "EBAY_FR", limite: int = 20) -> 
     """
     jeton = _obtenir_jeton()
     parametres = urllib.parse.urlencode(
-        {"q": mot_cle, "limit": str(limite), "category_ids": CATEGORIE_JEUX_VIDEO}
+        {"q": mot_cle, "limit": str(limite), "category_ids": _categories_actives()}
     )
     requete = urllib.request.Request(
         f"{SEARCH_URL}?{parametres}",
@@ -101,6 +121,8 @@ def rechercher(mot_cle: str, marketplace: str = "EBAY_FR", limite: int = 20) -> 
         except (TypeError, ValueError):
             prix_nombre = None
 
+        categories_item = item.get("categories") or []
+
         annonces.append(
             {
                 "id": item.get("itemId"),
@@ -110,6 +132,38 @@ def rechercher(mot_cle: str, marketplace: str = "EBAY_FR", limite: int = 20) -> 
                 "devise": prix.get("currency"),
                 "lien": item.get("itemWebUrl"),
                 "etat": item.get("condition"),
+                "image": (item.get("image") or {}).get("imageUrl"),
+                "categorie": categories_item[0].get("categoryName") if categories_item else None,
             }
         )
     return annonces
+
+
+def obtenir_details(item_id: str, marketplace: str = "EBAY_FR") -> dict:
+    """Récupère la description complète d'une annonce (get_item).
+
+    N'est appelé que pour les annonces qui ont déjà dépassé le seuil de score
+    sur le titre seul (voir scripts/filtrage.py) : jamais pour toutes les
+    annonces d'un coup, pour garder le nombre d'appels API maîtrisé.
+
+    Retourne un dictionnaire avec au moins la clé "description" (chaîne vide
+    si indisponible). En cas d'erreur, retourne une description vide plutôt
+    que d'interrompre la veille.
+    """
+    jeton = _obtenir_jeton()
+    requete = urllib.request.Request(
+        f"{ITEM_URL}/{urllib.parse.quote(item_id, safe='')}",
+        headers={
+            "Authorization": f"Bearer {jeton}",
+            "X-EBAY-C-MARKETPLACE-ID": marketplace,
+        },
+        method="GET",
+    )
+    try:
+        with urllib.request.urlopen(requete, timeout=20) as reponse:
+            donnees = json.loads(reponse.read().decode("utf-8"))
+    except urllib.error.HTTPError as erreur:
+        print(f"[eBay] Erreur en récupérant le détail de {item_id} : {erreur.code} {erreur.reason}")
+        return {"description": ""}
+
+    return {"description": donnees.get("description") or ""}

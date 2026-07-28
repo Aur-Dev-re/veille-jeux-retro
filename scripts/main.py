@@ -16,7 +16,9 @@ import yaml
 RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE / "scripts"))
 
-from ebay_client import rechercher  # noqa: E402
+from ebay_client import obtenir_details, rechercher  # noqa: E402
+from filtrage import score_final  # noqa: E402
+from github_issues import creer_issue, creer_labels_si_absents  # noqa: E402
 from notifier import envoyer_notification  # noqa: E402
 
 CONFIG_PATH = RACINE / "config" / "search_phrases.yml"
@@ -60,6 +62,12 @@ SEUIL_REDUCTION_PRIX = 0.20  # notifie seulement si le prix est au moins 20% sou
 NOMBRE_MIN_ECHANTILLONS_PRIX = 5  # annonces à observer avant de faire confiance à la moyenne
 ALPHA_MOYENNE_MOBILE = 0.15  # poids donné à chaque nouvelle observation dans la moyenne
 
+# Entonnoir de pertinence (étapes 3-4) : score minimal (voir scripts/filtrage.py)
+# pour qu'une annonce soit soumise à validation humaine. Valeur de départ à
+# ajuster après les premiers tests réels ; un seul mot-clé précis trouvé dans
+# le titre (ex: "Nintendo 64") suffit à atteindre ce seuil.
+SEUIL_SCORE_MINIMAL = 1.0
+
 
 def charger_env_local(chemin: Path) -> None:
     """Charge .env en local uniquement (tests sur ta machine).
@@ -77,24 +85,36 @@ def charger_env_local(chemin: Path) -> None:
         os.environ.setdefault(cle.strip(), valeur.strip())
 
 
+def _aplatir(valeur) -> list[str]:
+    resultat: list[str] = []
+    if isinstance(valeur, dict):
+        for sous_valeur in valeur.values():
+            resultat.extend(_aplatir(sous_valeur))
+    elif isinstance(valeur, list):
+        resultat.extend(valeur)
+    return resultat
+
+
 def charger_recherches(config_path: Path) -> list[str]:
     """Aplati config/search_phrases.yml en une simple liste de mots-clés à rechercher."""
     with config_path.open("r", encoding="utf-8") as fichier:
         donnees = yaml.safe_load(fichier)
 
     recherches: list[str] = []
-
-    def ajouter(valeur) -> None:
-        if isinstance(valeur, dict):
-            for sous_valeur in valeur.values():
-                ajouter(sous_valeur)
-        elif isinstance(valeur, list):
-            recherches.extend(valeur)
-
     for groupe in ("recherches_precises", "recherches_vagues", "recherches_contextuelles"):
-        ajouter(donnees.get(groupe))
-
+        recherches.extend(_aplatir(donnees.get(groupe)))
     return recherches
+
+
+def charger_groupes_recherche(config_path: Path) -> tuple[list[str], list[str], list[str]]:
+    """Charge séparément les 3 groupes du champ lexical, pour le scoring textuel (filtrage.py)."""
+    with config_path.open("r", encoding="utf-8") as fichier:
+        donnees = yaml.safe_load(fichier)
+    return (
+        _aplatir(donnees.get("recherches_precises")),
+        _aplatir(donnees.get("recherches_vagues")),
+        _aplatir(donnees.get("recherches_contextuelles")),
+    )
 
 
 def charger_consoles_et_marques(config_path: Path) -> list[str]:
@@ -176,6 +196,7 @@ def executer_veille_ebay(annonces_vues: dict, reference_prix: dict) -> None:
     recherches_completes = charger_recherches(CONFIG_PATH)
     consoles_et_marques = charger_consoles_et_marques(CONFIG_PATH)
     mots_cles_avec_filtre_prix = set(consoles_et_marques)
+    termes_precis, termes_vagues, termes_contextuels = charger_groupes_recherche(CONFIG_PATH)
 
     vues_ebay, marketplaces_initialisees = etat_ebay(annonces_vues)
 
@@ -204,10 +225,28 @@ def executer_veille_ebay(annonces_vues: dict, reference_prix: dict) -> None:
 
         for annonce in nouvelles:
             if not premiere_fois_marketplace:
-                doit_notifier = True
+                # Étape 3-4 : entonnoir texte, sur le titre seul d'abord (peu coûteux).
+                score, matches = score_final(
+                    annonce["titre"], "", termes_precis, termes_vagues, termes_contextuels
+                )
+
+                if score >= SEUIL_SCORE_MINIMAL:
+                    # Annonce prometteuse : un seul appel supplémentaire pour affiner
+                    # avec la description complète (jamais fait pour les annonces déjà
+                    # écartées sur le titre seul).
+                    details = obtenir_details(annonce["id"], marketplace)
+                    score, matches = score_final(
+                        annonce["titre"],
+                        details.get("description", ""),
+                        termes_precis,
+                        termes_vagues,
+                        termes_contextuels,
+                    )
+
+                doit_notifier = score >= SEUIL_SCORE_MINIMAL
                 complement = ""
 
-                if filtrer_par_prix:
+                if doit_notifier and filtrer_par_prix:
                     doit_notifier = annonce["prix_nombre"] is not None and est_une_bonne_affaire(
                         reference_prix, cle_prix, annonce["prix_nombre"]
                     )
@@ -216,11 +255,25 @@ def executer_veille_ebay(annonces_vues: dict, reference_prix: dict) -> None:
                         complement = f" (moyenne habituelle : {moyenne:.2f} {annonce['devise']})"
 
                 if doit_notifier:
+                    # Étape 7 : validation humaine via une Issue GitHub, jamais de
+                    # décision automatique définitive.
+                    lien_issue = None
+                    try:
+                        lien_issue = creer_issue(
+                            annonce,
+                            NOMS_MARKETPLACES.get(marketplace, marketplace),
+                            mot_cle,
+                            score,
+                            matches,
+                        )
+                    except Exception as erreur:  # noqa: BLE001
+                        print(f"[github_issues] Échec de création d'Issue, on continue : {erreur}")
+
                     prix = f"{annonce['prix']} {annonce['devise']}" if annonce["prix"] else "prix non précisé"
                     envoyer_notification_prudente(
                         titre=f"eBay {NOMS_MARKETPLACES.get(marketplace, marketplace)} : {mot_cle}",
                         message=f"{annonce['titre']} — {prix}{complement}",
-                        lien=annonce["lien"],
+                        lien=lien_issue or annonce["lien"],
                     )
             vues_ebay.add(annonce["id"])
 
@@ -269,6 +322,11 @@ def main() -> None:
 
     annonces_vues = charger_annonces_vues(ANNONCES_VUES_PATH)
     reference_prix = charger_reference_prix(REFERENCE_PRIX_PATH)
+
+    try:
+        creer_labels_si_absents()
+    except Exception as erreur:  # noqa: BLE001
+        print(f"[github_issues] Impossible de préparer les étiquettes de validation : {erreur}")
 
     try:
         executer_veille_ebay(annonces_vues, reference_prix)

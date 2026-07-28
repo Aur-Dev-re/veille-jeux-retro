@@ -1,0 +1,30 @@
+# ==================================================================
+# Catégories eBay autorisées pour la recherche (Browse API)
+# ==================================================================
+# Seules les catégories marquées "actif: true" sont utilisées. La recherche
+# eBay ne renvoie alors que des annonces classées par le vendeur dans l'une
+# de ces catégories : ça élimine dès le départ l'essentiel du hors-sujet
+# (t-shirts, mugs, figurines...), qui sont normalement classés ailleurs.
+#
+# Pour ajouter une catégorie : trouve son identifiant numérique eBay (visible
+# dans l'URL d'une page de catégorie, ex: ebay.fr/b/.../<ID>/...), ajoute une
+# entrée ci-dessous avec actif: true. Sans confirmation de l'ID, laisse
+# actif: false : mieux vaut ne pas chercher dans une catégorie qu'utiliser un
+# mauvais identifiant.
+
+categories:
+  - id: "1249"
+    nom: "Jeux vidéo et consoles"
+    actif: true
+
+  # Catégories complémentaires envisagées (débarras, brocante, high-tech...) :
+  # IDs à vérifier avant activation, laissées inactives en attendant.
+  # - id: ""
+  #   nom: "Informatique"
+  #   actif: false
+  # - id: ""
+  #   nom: "Objets de collection"
+  #   actif: false
+  # - id: ""
+  #   nom: "Jouets"
+  #   actif: false
