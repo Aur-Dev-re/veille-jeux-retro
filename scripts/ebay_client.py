@@ -18,6 +18,11 @@ OAUTH_URL = "https://api.ebay.com/identity/v1/oauth2/token"
 SEARCH_URL = "https://api.ebay.com/buy/browse/v1/item_summary/search"
 SCOPE = "https://api.ebay.com/oauth/api_scope"
 
+# Catégorie eBay "Video Games & Consoles", commune à tous les marketplaces
+# eBay utilisés par ce projet. Sans elle, une recherche par mot-clé simple
+# remonte aussi des articles hors-sujet (ex: un t-shirt à motif Nintendo).
+CATEGORIE_JEUX_VIDEO = "1249"
+
 # Jeton d'accès mis en cache en mémoire le temps de l'exécution du script
 # (il reste valide ~2h, largement plus que la durée d'une exécution).
 _jeton_cache: dict[str, float | str] = {}
@@ -69,7 +74,9 @@ def rechercher(mot_cle: str, marketplace: str = "EBAY_FR", limite: int = 20) -> 
     dépassé), retourne une liste vide plutôt que d'interrompre toute la veille.
     """
     jeton = _obtenir_jeton()
-    parametres = urllib.parse.urlencode({"q": mot_cle, "limit": str(limite)})
+    parametres = urllib.parse.urlencode(
+        {"q": mot_cle, "limit": str(limite), "category_ids": CATEGORIE_JEUX_VIDEO}
+    )
     requete = urllib.request.Request(
         f"{SEARCH_URL}?{parametres}",
         headers={

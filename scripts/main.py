@@ -26,6 +26,10 @@ ENV_LOCAL_PATH = RACINE / ".env"
 # Petite pause entre deux recherches, pour rester raisonnable vis-à-vis d'eBay.
 PAUSE_ENTRE_RECHERCHES_SECONDES = 0.3
 
+# ntfy (offre gratuite) limite les envois en rafale (~12/min en usage prolongé) :
+# une petite pause entre deux notifications évite de se faire rejeter (HTTP 429).
+PAUSE_ENTRE_NOTIFICATIONS_SECONDES = 1.0
+
 # eBay France reçoit le champ lexical complet (précises + vagues + contextuelles,
 # toutes en français). Les autres marketplaces eBay ne reçoivent que les noms de
 # consoles/marques (universels d'une langue à l'autre) : les recherches vagues et
@@ -97,30 +101,52 @@ def sauvegarder_annonces_vues(chemin: Path, donnees: dict) -> None:
         json.dump(donnees, fichier, ensure_ascii=False, indent=2, sort_keys=True)
 
 
+def etat_ebay(annonces_vues: dict) -> tuple[set, set]:
+    """Récupère (annonces déjà vues, marketplaces déjà initialisés) pour eBay.
+
+    Gère la migration depuis l'ancien format (une simple liste d'identifiants),
+    utilisé avant l'ajout du suivi par marketplace.
+    """
+    etat = annonces_vues.get("ebay", {})
+    if isinstance(etat, list):
+        # Ancien format : seule eBay France avait été interrogée jusque-là.
+        return set(etat), {"EBAY_FR"}
+    return set(etat.get("vus", [])), set(etat.get("marketplaces_initialisees", []))
+
+
+def envoyer_notification_prudente(**kwargs) -> None:
+    """Envoie une notification sans jamais faire planter toute la veille si ça échoue
+    (ex: ntfy momentanément saturé) : on log l'erreur et on continue.
+    """
+    try:
+        envoyer_notification(**kwargs)
+    except Exception as erreur:  # noqa: BLE001 - on ne veut jamais interrompre la veille ici
+        print(f"[notifier] Échec d'envoi d'une notification, on continue : {erreur}")
+    time.sleep(PAUSE_ENTRE_NOTIFICATIONS_SECONDES)
+
+
 def executer_veille_ebay(annonces_vues: dict) -> None:
     recherches_completes = charger_recherches(CONFIG_PATH)
     consoles_et_marques = charger_consoles_et_marques(CONFIG_PATH)
 
-    # Première exécution : aucune annonce connue pour eBay -> on apprend ce qui
-    # existe déjà sans envoyer une notification par annonce (pour ne pas noyer
-    # la première utilisation sous des centaines de notifications d'annonces
-    # qui étaient déjà en ligne avant le démarrage de la veille).
-    premiere_execution = "ebay" not in annonces_vues
-    if premiere_execution:
-        print("[eBay] Première exécution : les annonces déjà en ligne seront mémorisées sans notification.")
+    vues_ebay, marketplaces_initialisees = etat_ebay(annonces_vues)
 
-    # Un même objet a le même identifiant eBay quel que soit le marketplace
-    # utilisé pour le trouver : un seul ensemble suffit pour tous les pays.
-    vues_ebay = set(annonces_vues.get("ebay", []))
+    def sauvegarder_progres() -> None:
+        # Appelé aussi en cas d'erreur en cours de route (voir le "finally" plus
+        # bas) : ce qui a déjà été trouvé ne doit jamais être perdu.
+        annonces_vues["ebay"] = {
+            "vus": sorted(vues_ebay),
+            "marketplaces_initialisees": sorted(marketplaces_initialisees),
+        }
 
-    def traiter_recherche(mot_cle: str, marketplace: str) -> None:
+    def traiter_recherche(mot_cle: str, marketplace: str, premiere_fois_marketplace: bool) -> None:
         annonces = rechercher(mot_cle, marketplace=marketplace)
         nouvelles = [a for a in annonces if a["id"] and a["id"] not in vues_ebay]
 
         for annonce in nouvelles:
-            if not premiere_execution:
+            if not premiere_fois_marketplace:
                 prix = f"{annonce['prix']} {annonce['devise']}" if annonce["prix"] else "prix non précisé"
-                envoyer_notification(
+                envoyer_notification_prudente(
                     titre=f"eBay {NOMS_MARKETPLACES.get(marketplace, marketplace)} : {mot_cle}",
                     message=f"{annonce['titre']} — {prix}",
                     lien=annonce["lien"],
@@ -129,20 +155,39 @@ def executer_veille_ebay(annonces_vues: dict) -> None:
 
         time.sleep(PAUSE_ENTRE_RECHERCHES_SECONDES)
 
-    print(f"[eBay] France : {len(recherches_completes)} recherches (champ lexical complet).")
-    for mot_cle in recherches_completes:
-        traiter_recherche(mot_cle, "EBAY_FR")
+    def traiter_marketplace(marketplace: str, mots_cles: list[str], description: str) -> None:
+        # Première fois qu'on interroge CE marketplace : on mémorise les annonces
+        # déjà en ligne sans notifier, pour ne pas noyer la mise en route sous des
+        # notifications rétroactives (voir la même logique pour la toute première
+        # exécution du projet, appliquée ici par marketplace).
+        premiere_fois = marketplace not in marketplaces_initialisees
+        if premiere_fois:
+            print(f"[eBay] {description} : première interrogation, mémorisation sans notification.")
+        else:
+            print(f"[eBay] {description}.")
 
-    print(
-        f"[eBay] Autres pays UE ({', '.join(NOMS_MARKETPLACES[m] for m in MARKETPLACES_SUPPLEMENTAIRES)}) : "
-        f"{len(consoles_et_marques)} recherches (noms de consoles/marques uniquement)."
-    )
-    for marketplace in MARKETPLACES_SUPPLEMENTAIRES:
-        for mot_cle in consoles_et_marques:
-            traiter_recherche(mot_cle, marketplace)
+        for mot_cle in mots_cles:
+            traiter_recherche(mot_cle, marketplace, premiere_fois)
 
-    annonces_vues["ebay"] = sorted(vues_ebay)
-    print(f"[eBay] Terminé. {len(vues_ebay)} annonces au total mémorisées.")
+        marketplaces_initialisees.add(marketplace)
+
+    try:
+        traiter_marketplace(
+            "EBAY_FR",
+            recherches_completes,
+            f"France : {len(recherches_completes)} recherches (champ lexical complet)",
+        )
+
+        for marketplace in MARKETPLACES_SUPPLEMENTAIRES:
+            traiter_marketplace(
+                marketplace,
+                consoles_et_marques,
+                f"{NOMS_MARKETPLACES[marketplace]} : {len(consoles_et_marques)} recherches "
+                "(noms de consoles/marques uniquement)",
+            )
+    finally:
+        sauvegarder_progres()
+        print(f"[eBay] Terminé. {len(vues_ebay)} annonces au total mémorisées.")
 
 
 def main() -> None:
@@ -155,12 +200,13 @@ def main() -> None:
 
     try:
         executer_veille_ebay(annonces_vues)
-    except RuntimeError as erreur:
-        # Ex: clés EBAY_CLIENT_ID/SECRET absentes -> on prévient sans faire
-        # échouer toute la veille (les autres plateformes pourront tourner).
-        print(f"[eBay] Veille eBay ignorée : {erreur}")
-
-    sauvegarder_annonces_vues(ANNONCES_VUES_PATH, annonces_vues)
+    except Exception as erreur:  # noqa: BLE001
+        # On ne laisse jamais un souci (clés manquantes, erreur réseau, quota
+        # eBay dépassé...) faire perdre tout le travail déjà accompli : ce qui
+        # a été trouvé avant l'erreur est quand même sauvegardé juste après.
+        print(f"[eBay] Veille eBay interrompue par une erreur, mais l'état déjà trouvé sera sauvegardé : {erreur}")
+    finally:
+        sauvegarder_annonces_vues(ANNONCES_VUES_PATH, annonces_vues)
 
     # Test ponctuel de bout en bout (Secret GitHub -> Actions -> ntfy).
     # Ne se déclenche que si on le demande explicitement (bouton "Run workflow"
