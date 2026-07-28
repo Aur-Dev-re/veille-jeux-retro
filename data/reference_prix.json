@@ -1,1 +1,626 @@
-{}
+{
+  "EBAY_BE::Amiga": {
+    "moyenne": 248.7642165329898,
+    "nombre": 20
+  },
+  "EBAY_BE::Atari 2600": {
+    "moyenne": 77.86426174213909,
+    "nombre": 20
+  },
+  "EBAY_BE::Atari ST": {
+    "moyenne": 86.76909971411573,
+    "nombre": 20
+  },
+  "EBAY_BE::Dreamcast": {
+    "moyenne": 120.2964622011755,
+    "nombre": 20
+  },
+  "EBAY_BE::Game Boy": {
+    "moyenne": 132.94467209018813,
+    "nombre": 20
+  },
+  "EBAY_BE::Game Boy Advance": {
+    "moyenne": 163.41844384733994,
+    "nombre": 20
+  },
+  "EBAY_BE::Game Boy Color": {
+    "moyenne": 157.14404601357876,
+    "nombre": 20
+  },
+  "EBAY_BE::GameCube": {
+    "moyenne": 121.94511344974313,
+    "nombre": 20
+  },
+  "EBAY_BE::Master System": {
+    "moyenne": 68.7931971517489,
+    "nombre": 20
+  },
+  "EBAY_BE::Mega Drive": {
+    "moyenne": 165.1165527876828,
+    "nombre": 20
+  },
+  "EBAY_BE::NES": {
+    "moyenne": 63.65102790149235,
+    "nombre": 20
+  },
+  "EBAY_BE::Neo Geo": {
+    "moyenne": 334.0511182617554,
+    "nombre": 20
+  },
+  "EBAY_BE::Nintendo 3DS": {
+    "moyenne": 224.210207910463,
+    "nombre": 20
+  },
+  "EBAY_BE::Nintendo 64": {
+    "moyenne": 140.56777885944396,
+    "nombre": 20
+  },
+  "EBAY_BE::Nintendo DS": {
+    "moyenne": 100.4946310387035,
+    "nombre": 20
+  },
+  "EBAY_BE::PS Vita": {
+    "moyenne": 149.2325342836547,
+    "nombre": 20
+  },
+  "EBAY_BE::PSP": {
+    "moyenne": 71.37972279593588,
+    "nombre": 20
+  },
+  "EBAY_BE::PlayStation 1": {
+    "moyenne": 48.256252206479246,
+    "nombre": 20
+  },
+  "EBAY_BE::PlayStation 2": {
+    "moyenne": 52.5752495998535,
+    "nombre": 20
+  },
+  "EBAY_BE::PlayStation 3": {
+    "moyenne": 173.99715441120014,
+    "nombre": 20
+  },
+  "EBAY_BE::Saturn": {
+    "moyenne": 145.08803460030754,
+    "nombre": 20
+  },
+  "EBAY_BE::Super Nintendo": {
+    "moyenne": 81.49690970401505,
+    "nombre": 20
+  },
+  "EBAY_BE::Wii": {
+    "moyenne": 130.49212641227183,
+    "nombre": 20
+  },
+  "EBAY_BE::Wii U": {
+    "moyenne": 107.17613909156837,
+    "nombre": 20
+  },
+  "EBAY_BE::Xbox": {
+    "moyenne": 88.11683180631398,
+    "nombre": 20
+  },
+  "EBAY_BE::Xbox 360": {
+    "moyenne": 40.05538765284854,
+    "nombre": 20
+  },
+  "EBAY_DE::Amiga": {
+    "moyenne": 163.61347215231277,
+    "nombre": 20
+  },
+  "EBAY_DE::Atari 2600": {
+    "moyenne": 86.42196287445093,
+    "nombre": 20
+  },
+  "EBAY_DE::Atari ST": {
+    "moyenne": 77.12525724239342,
+    "nombre": 20
+  },
+  "EBAY_DE::Dreamcast": {
+    "moyenne": 87.34032434693648,
+    "nombre": 20
+  },
+  "EBAY_DE::Game Boy": {
+    "moyenne": 112.8564534182842,
+    "nombre": 20
+  },
+  "EBAY_DE::Game Boy Advance": {
+    "moyenne": 118.10895848103176,
+    "nombre": 20
+  },
+  "EBAY_DE::Game Boy Color": {
+    "moyenne": 116.01169549449597,
+    "nombre": 20
+  },
+  "EBAY_DE::GameCube": {
+    "moyenne": 51.7047828025967,
+    "nombre": 20
+  },
+  "EBAY_DE::Master System": {
+    "moyenne": 72.92376793021552,
+    "nombre": 20
+  },
+  "EBAY_DE::Mega Drive": {
+    "moyenne": 58.74011620010659,
+    "nombre": 20
+  },
+  "EBAY_DE::NES": {
+    "moyenne": 155.43119429053968,
+    "nombre": 20
+  },
+  "EBAY_DE::Neo Geo": {
+    "moyenne": 246.70014647613837,
+    "nombre": 20
+  },
+  "EBAY_DE::Nintendo 3DS": {
+    "moyenne": 163.99469934838083,
+    "nombre": 20
+  },
+  "EBAY_DE::Nintendo 64": {
+    "moyenne": 154.76307048638353,
+    "nombre": 20
+  },
+  "EBAY_DE::Nintendo DS": {
+    "moyenne": 77.48905123047452,
+    "nombre": 20
+  },
+  "EBAY_DE::PS Vita": {
+    "moyenne": 145.9343242979478,
+    "nombre": 20
+  },
+  "EBAY_DE::PSP": {
+    "moyenne": 69.6422858703148,
+    "nombre": 20
+  },
+  "EBAY_DE::PlayStation 1": {
+    "moyenne": 71.21439543601673,
+    "nombre": 20
+  },
+  "EBAY_DE::PlayStation 2": {
+    "moyenne": 56.80723215073242,
+    "nombre": 20
+  },
+  "EBAY_DE::PlayStation 3": {
+    "moyenne": 68.38302109180178,
+    "nombre": 20
+  },
+  "EBAY_DE::Saturn": {
+    "moyenne": 122.60962630990781,
+    "nombre": 20
+  },
+  "EBAY_DE::Super Nintendo": {
+    "moyenne": 125.22514535192738,
+    "nombre": 20
+  },
+  "EBAY_DE::Wii": {
+    "moyenne": 69.58674685353249,
+    "nombre": 20
+  },
+  "EBAY_DE::Wii U": {
+    "moyenne": 101.6153539847344,
+    "nombre": 20
+  },
+  "EBAY_DE::Xbox": {
+    "moyenne": 90.72230326698195,
+    "nombre": 20
+  },
+  "EBAY_DE::Xbox 360": {
+    "moyenne": 63.55833484443736,
+    "nombre": 20
+  },
+  "EBAY_ES::Amiga": {
+    "moyenne": 172.25257134572985,
+    "nombre": 20
+  },
+  "EBAY_ES::Atari 2600": {
+    "moyenne": 89.3926291428767,
+    "nombre": 20
+  },
+  "EBAY_ES::Atari ST": {
+    "moyenne": 95.10777660478917,
+    "nombre": 20
+  },
+  "EBAY_ES::Dreamcast": {
+    "moyenne": 88.7813550032761,
+    "nombre": 20
+  },
+  "EBAY_ES::Game Boy": {
+    "moyenne": 100.63617242263408,
+    "nombre": 20
+  },
+  "EBAY_ES::Game Boy Advance": {
+    "moyenne": 151.58914227176675,
+    "nombre": 20
+  },
+  "EBAY_ES::Game Boy Color": {
+    "moyenne": 123.32990020822004,
+    "nombre": 20
+  },
+  "EBAY_ES::GameCube": {
+    "moyenne": 88.49478244733359,
+    "nombre": 20
+  },
+  "EBAY_ES::Master System": {
+    "moyenne": 123.47364510181706,
+    "nombre": 20
+  },
+  "EBAY_ES::Mega Drive": {
+    "moyenne": 150.2335393224559,
+    "nombre": 20
+  },
+  "EBAY_ES::NES": {
+    "moyenne": 46.18633777771173,
+    "nombre": 20
+  },
+  "EBAY_ES::Neo Geo": {
+    "moyenne": 263.8326720258487,
+    "nombre": 20
+  },
+  "EBAY_ES::Nintendo 3DS": {
+    "moyenne": 182.47741974154638,
+    "nombre": 20
+  },
+  "EBAY_ES::Nintendo 64": {
+    "moyenne": 266.185432367575,
+    "nombre": 20
+  },
+  "EBAY_ES::Nintendo DS": {
+    "moyenne": 82.61462381820613,
+    "nombre": 20
+  },
+  "EBAY_ES::PS Vita": {
+    "moyenne": 156.41636994824742,
+    "nombre": 20
+  },
+  "EBAY_ES::PSP": {
+    "moyenne": 90.9800981380142,
+    "nombre": 20
+  },
+  "EBAY_ES::PlayStation 1": {
+    "moyenne": 64.34837340689579,
+    "nombre": 20
+  },
+  "EBAY_ES::PlayStation 2": {
+    "moyenne": 86.6789316658677,
+    "nombre": 20
+  },
+  "EBAY_ES::PlayStation 3": {
+    "moyenne": 186.85030829276226,
+    "nombre": 20
+  },
+  "EBAY_ES::Saturn": {
+    "moyenne": 93.83731063509225,
+    "nombre": 20
+  },
+  "EBAY_ES::Super Nintendo": {
+    "moyenne": 36.25349016045021,
+    "nombre": 20
+  },
+  "EBAY_ES::Wii": {
+    "moyenne": 82.51086126142937,
+    "nombre": 20
+  },
+  "EBAY_ES::Wii U": {
+    "moyenne": 145.72937564579397,
+    "nombre": 20
+  },
+  "EBAY_ES::Xbox": {
+    "moyenne": 59.734253103153826,
+    "nombre": 20
+  },
+  "EBAY_ES::Xbox 360": {
+    "moyenne": 93.85477468542726,
+    "nombre": 20
+  },
+  "EBAY_FR::Amiga": {
+    "moyenne": 116.50830017220001,
+    "nombre": 20
+  },
+  "EBAY_FR::Atari 2600": {
+    "moyenne": 68.9797123485173,
+    "nombre": 20
+  },
+  "EBAY_FR::Atari ST": {
+    "moyenne": 70.49804171882535,
+    "nombre": 20
+  },
+  "EBAY_FR::Dreamcast": {
+    "moyenne": 67.71063476092547,
+    "nombre": 20
+  },
+  "EBAY_FR::Game Boy": {
+    "moyenne": 72.8443123804831,
+    "nombre": 20
+  },
+  "EBAY_FR::Game Boy Advance": {
+    "moyenne": 99.71432870934493,
+    "nombre": 20
+  },
+  "EBAY_FR::Game Boy Color": {
+    "moyenne": 103.63604182875685,
+    "nombre": 20
+  },
+  "EBAY_FR::GameCube": {
+    "moyenne": 99.15819325243567,
+    "nombre": 20
+  },
+  "EBAY_FR::Master System": {
+    "moyenne": 28.374798478292316,
+    "nombre": 20
+  },
+  "EBAY_FR::Mega Drive": {
+    "moyenne": 57.0581497874755,
+    "nombre": 20
+  },
+  "EBAY_FR::NES": {
+    "moyenne": 178.35540936653973,
+    "nombre": 20
+  },
+  "EBAY_FR::Neo Geo": {
+    "moyenne": 389.50486772460266,
+    "nombre": 20
+  },
+  "EBAY_FR::Nintendo 3DS": {
+    "moyenne": 300.5334845236468,
+    "nombre": 20
+  },
+  "EBAY_FR::Nintendo 64": {
+    "moyenne": 114.58095370533847,
+    "nombre": 20
+  },
+  "EBAY_FR::Nintendo DS": {
+    "moyenne": 47.17260716335396,
+    "nombre": 20
+  },
+  "EBAY_FR::PS Vita": {
+    "moyenne": 113.70340026842163,
+    "nombre": 20
+  },
+  "EBAY_FR::PSP": {
+    "moyenne": 39.805285138001786,
+    "nombre": 20
+  },
+  "EBAY_FR::PlayStation 1": {
+    "moyenne": 60.796776265509706,
+    "nombre": 20
+  },
+  "EBAY_FR::PlayStation 2": {
+    "moyenne": 74.62701904384637,
+    "nombre": 20
+  },
+  "EBAY_FR::PlayStation 3": {
+    "moyenne": 74.45857935584071,
+    "nombre": 20
+  },
+  "EBAY_FR::Saturn": {
+    "moyenne": 63.67568214716627,
+    "nombre": 20
+  },
+  "EBAY_FR::Super Nintendo": {
+    "moyenne": 92.86206644948709,
+    "nombre": 20
+  },
+  "EBAY_FR::Wii": {
+    "moyenne": 26.537381189428583,
+    "nombre": 20
+  },
+  "EBAY_FR::Wii U": {
+    "moyenne": 183.72239114529617,
+    "nombre": 20
+  },
+  "EBAY_FR::Xbox": {
+    "moyenne": 78.82779703594142,
+    "nombre": 20
+  },
+  "EBAY_FR::Xbox 360": {
+    "moyenne": 120.52648108841161,
+    "nombre": 20
+  },
+  "EBAY_GB::Amiga": {
+    "moyenne": 45.90962323111502,
+    "nombre": 20
+  },
+  "EBAY_GB::Atari 2600": {
+    "moyenne": 79.17190970010593,
+    "nombre": 20
+  },
+  "EBAY_GB::Atari ST": {
+    "moyenne": 44.2113962495819,
+    "nombre": 20
+  },
+  "EBAY_GB::Dreamcast": {
+    "moyenne": 44.85762431904872,
+    "nombre": 20
+  },
+  "EBAY_GB::Game Boy": {
+    "moyenne": 67.22984871411474,
+    "nombre": 20
+  },
+  "EBAY_GB::Game Boy Advance": {
+    "moyenne": 93.17506223846097,
+    "nombre": 20
+  },
+  "EBAY_GB::Game Boy Color": {
+    "moyenne": 83.15074064356801,
+    "nombre": 20
+  },
+  "EBAY_GB::GameCube": {
+    "moyenne": 94.15643033065038,
+    "nombre": 20
+  },
+  "EBAY_GB::Master System": {
+    "moyenne": 129.72844005756775,
+    "nombre": 20
+  },
+  "EBAY_GB::Mega Drive": {
+    "moyenne": 105.56186764153733,
+    "nombre": 20
+  },
+  "EBAY_GB::NES": {
+    "moyenne": 108.52114753065348,
+    "nombre": 20
+  },
+  "EBAY_GB::Neo Geo": {
+    "moyenne": 161.883025592108,
+    "nombre": 20
+  },
+  "EBAY_GB::Nintendo 3DS": {
+    "moyenne": 171.76233132398954,
+    "nombre": 20
+  },
+  "EBAY_GB::Nintendo 64": {
+    "moyenne": 81.33770412641593,
+    "nombre": 20
+  },
+  "EBAY_GB::Nintendo DS": {
+    "moyenne": 36.09851065354742,
+    "nombre": 20
+  },
+  "EBAY_GB::PS Vita": {
+    "moyenne": 115.58334601958744,
+    "nombre": 20
+  },
+  "EBAY_GB::PSP": {
+    "moyenne": 25.788498235126685,
+    "nombre": 20
+  },
+  "EBAY_GB::PlayStation 1": {
+    "moyenne": 42.468316595844655,
+    "nombre": 20
+  },
+  "EBAY_GB::PlayStation 2": {
+    "moyenne": 73.88328152795853,
+    "nombre": 20
+  },
+  "EBAY_GB::PlayStation 3": {
+    "moyenne": 108.803584180238,
+    "nombre": 20
+  },
+  "EBAY_GB::Saturn": {
+    "moyenne": 48.82185147752588,
+    "nombre": 20
+  },
+  "EBAY_GB::Super Nintendo": {
+    "moyenne": 99.01197591986191,
+    "nombre": 20
+  },
+  "EBAY_GB::Wii": {
+    "moyenne": 43.67772773528522,
+    "nombre": 20
+  },
+  "EBAY_GB::Wii U": {
+    "moyenne": 60.87375717595184,
+    "nombre": 20
+  },
+  "EBAY_GB::Xbox": {
+    "moyenne": 53.80803113194244,
+    "nombre": 20
+  },
+  "EBAY_GB::Xbox 360": {
+    "moyenne": 64.24000651523959,
+    "nombre": 20
+  },
+  "EBAY_IT::Amiga": {
+    "moyenne": 112.0829589633575,
+    "nombre": 20
+  },
+  "EBAY_IT::Atari 2600": {
+    "moyenne": 141.7864186313139,
+    "nombre": 20
+  },
+  "EBAY_IT::Atari ST": {
+    "moyenne": 73.4603783072209,
+    "nombre": 20
+  },
+  "EBAY_IT::Dreamcast": {
+    "moyenne": 122.5530325517712,
+    "nombre": 20
+  },
+  "EBAY_IT::Game Boy": {
+    "moyenne": 106.01825777028999,
+    "nombre": 20
+  },
+  "EBAY_IT::Game Boy Advance": {
+    "moyenne": 139.31680808279674,
+    "nombre": 20
+  },
+  "EBAY_IT::Game Boy Color": {
+    "moyenne": 130.35679997486272,
+    "nombre": 20
+  },
+  "EBAY_IT::GameCube": {
+    "moyenne": 133.78857927391192,
+    "nombre": 20
+  },
+  "EBAY_IT::Master System": {
+    "moyenne": 73.26328826685277,
+    "nombre": 20
+  },
+  "EBAY_IT::Mega Drive": {
+    "moyenne": 92.7873043120169,
+    "nombre": 20
+  },
+  "EBAY_IT::NES": {
+    "moyenne": 54.75268054906443,
+    "nombre": 20
+  },
+  "EBAY_IT::Neo Geo": {
+    "moyenne": 254.4568807844885,
+    "nombre": 20
+  },
+  "EBAY_IT::Nintendo 3DS": {
+    "moyenne": 180.96729575871694,
+    "nombre": 20
+  },
+  "EBAY_IT::Nintendo 64": {
+    "moyenne": 131.725658154785,
+    "nombre": 20
+  },
+  "EBAY_IT::Nintendo DS": {
+    "moyenne": 75.23597349125167,
+    "nombre": 20
+  },
+  "EBAY_IT::PS Vita": {
+    "moyenne": 163.2642174691909,
+    "nombre": 20
+  },
+  "EBAY_IT::PSP": {
+    "moyenne": 107.80018380724212,
+    "nombre": 20
+  },
+  "EBAY_IT::PlayStation 1": {
+    "moyenne": 58.691528922118806,
+    "nombre": 20
+  },
+  "EBAY_IT::PlayStation 2": {
+    "moyenne": 65.5509330216544,
+    "nombre": 20
+  },
+  "EBAY_IT::PlayStation 3": {
+    "moyenne": 84.15649152361497,
+    "nombre": 20
+  },
+  "EBAY_IT::Saturn": {
+    "moyenne": 51.35901537755895,
+    "nombre": 20
+  },
+  "EBAY_IT::Super Nintendo": {
+    "moyenne": 243.52343313448048,
+    "nombre": 20
+  },
+  "EBAY_IT::Wii": {
+    "moyenne": 44.57638883113119,
+    "nombre": 20
+  },
+  "EBAY_IT::Wii U": {
+    "moyenne": 117.75263220508923,
+    "nombre": 20
+  },
+  "EBAY_IT::Xbox": {
+    "moyenne": 69.67728854608504,
+    "nombre": 20
+  },
+  "EBAY_IT::Xbox 360": {
+    "moyenne": 56.60165412696079,
+    "nombre": 20
+  }
+}
