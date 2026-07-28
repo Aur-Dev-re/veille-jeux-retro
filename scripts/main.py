@@ -148,8 +148,35 @@ def sauvegarder_reference_prix(chemin: Path, donnees: dict) -> None:
         json.dump(donnees, fichier, ensure_ascii=False, indent=2, sort_keys=True)
 
 
-def cle_reference_prix(marketplace: str, mot_cle: str) -> str:
-    return f"{marketplace}::{mot_cle}"
+# Termes indiquant l'état de complétude d'un jeu, pour ne jamais comparer le
+# prix d'un jeu en loose (cartouche/disque seul) à la moyenne d'un jeu complet
+# (boîte + notice), qui coûte structurellement plus cher : sans ça, un loose
+# à prix normal ressort à tort comme "-20% sous la moyenne". Couvre plusieurs
+# langues (marketplaces FR/DE/ES/IT/BE/GB).
+TERMES_COMPLET = [
+    "cib", "complete in box", "complet", "complete", "boxed", "boîte", "boite",
+    "en boite", "en boîte", "avec boite", "avec boîte", "notice", "ovp",
+    "con caja", "scatola", "avec manuel",
+]
+TERMES_LOOSE = [
+    "loose", "cartouche seule", "cartouche uniquement", "cartridge only",
+    "sans boite", "sans boîte", "no box", "solo cartucho", "senza scatola",
+    "disque seul", "disc only",
+]
+
+
+def bucket_completude(titre: str) -> str:
+    """Devine si le titre décrit un jeu loose, complet, ou indéterminé."""
+    texte = (titre or "").lower()
+    if any(terme in texte for terme in TERMES_LOOSE):
+        return "loose"
+    if any(terme in texte for terme in TERMES_COMPLET):
+        return "complet"
+    return "indetermine"
+
+
+def cle_reference_prix(marketplace: str, mot_cle: str, bucket: str) -> str:
+    return f"{marketplace}::{mot_cle}::{bucket}"
 
 
 def mettre_a_jour_moyenne_prix(reference_prix: dict, cle: str, prix: float) -> None:
@@ -211,14 +238,17 @@ def executer_veille_ebay(annonces_vues: dict, reference_prix: dict) -> None:
     def traiter_recherche(mot_cle: str, marketplace: str, premiere_fois_marketplace: bool) -> None:
         annonces = rechercher(mot_cle, marketplace=marketplace)
         filtrer_par_prix = mot_cle in mots_cles_avec_filtre_prix
-        cle_prix = cle_reference_prix(marketplace, mot_cle)
 
         if filtrer_par_prix:
             # On affine la moyenne avec TOUTES les annonces observées (pas
             # seulement les nouvelles), pour qu'elle reflète les prix
-            # actuellement demandés sur le marché.
+            # actuellement demandés sur le marché. Une moyenne séparée par état
+            # de complétude (voir bucket_completude) : sinon un loose se
+            # retrouve comparé à une moyenne tirée vers le haut par des jeux
+            # complets, et ressort à tort comme "-20% sous la moyenne".
             for annonce in annonces:
                 if annonce["prix_nombre"] is not None:
+                    cle_prix = cle_reference_prix(marketplace, mot_cle, bucket_completude(annonce["titre"]))
                     mettre_a_jour_moyenne_prix(reference_prix, cle_prix, annonce["prix_nombre"])
 
         nouvelles = [a for a in annonces if a["id"] and a["id"] not in vues_ebay]
@@ -247,12 +277,14 @@ def executer_veille_ebay(annonces_vues: dict, reference_prix: dict) -> None:
                 complement = ""
 
                 if doit_notifier and filtrer_par_prix:
+                    bucket = bucket_completude(annonce["titre"])
+                    cle_prix = cle_reference_prix(marketplace, mot_cle, bucket)
                     doit_notifier = annonce["prix_nombre"] is not None and est_une_bonne_affaire(
                         reference_prix, cle_prix, annonce["prix_nombre"]
                     )
                     if doit_notifier:
                         moyenne = reference_prix[cle_prix]["moyenne"]
-                        complement = f" (moyenne habituelle : {moyenne:.2f} {annonce['devise']})"
+                        complement = f" (moyenne habituelle {bucket} : {moyenne:.2f} {annonce['devise']})"
 
                 if doit_notifier:
                     # Étape 7 : validation humaine via une Issue GitHub, jamais de
