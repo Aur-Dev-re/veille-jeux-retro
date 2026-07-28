@@ -26,6 +26,21 @@ ENV_LOCAL_PATH = RACINE / ".env"
 # Petite pause entre deux recherches, pour rester raisonnable vis-à-vis d'eBay.
 PAUSE_ENTRE_RECHERCHES_SECONDES = 0.3
 
+# eBay France reçoit le champ lexical complet (précises + vagues + contextuelles,
+# toutes en français). Les autres marketplaces eBay ne reçoivent que les noms de
+# consoles/marques (universels d'une langue à l'autre) : les recherches vagues et
+# contextuelles sont rédigées en français et ne matcheraient presque rien chez un
+# vendeur allemand, espagnol, italien ou anglais. Voir docs/plateformes.md, fiche 26.
+NOMS_MARKETPLACES = {
+    "EBAY_FR": "France",
+    "EBAY_DE": "Allemagne",
+    "EBAY_ES": "Espagne",
+    "EBAY_IT": "Italie",
+    "EBAY_BE": "Belgique",
+    "EBAY_GB": "Royaume-Uni",
+}
+MARKETPLACES_SUPPLEMENTAIRES = ["EBAY_DE", "EBAY_ES", "EBAY_IT", "EBAY_BE", "EBAY_GB"]
+
 
 def charger_env_local(chemin: Path) -> None:
     """Charge .env en local uniquement (tests sur ta machine).
@@ -63,6 +78,13 @@ def charger_recherches(config_path: Path) -> list[str]:
     return recherches
 
 
+def charger_consoles_et_marques(config_path: Path) -> list[str]:
+    """Ne récupère que les noms de consoles/marques (universels d'une langue à l'autre)."""
+    with config_path.open("r", encoding="utf-8") as fichier:
+        donnees = yaml.safe_load(fichier)
+    return list(donnees.get("recherches_precises", {}).get("consoles_et_marques", []))
+
+
 def charger_annonces_vues(chemin: Path) -> dict:
     if not chemin.exists():
         return {}
@@ -76,7 +98,8 @@ def sauvegarder_annonces_vues(chemin: Path, donnees: dict) -> None:
 
 
 def executer_veille_ebay(annonces_vues: dict) -> None:
-    recherches = charger_recherches(CONFIG_PATH)
+    recherches_completes = charger_recherches(CONFIG_PATH)
+    consoles_et_marques = charger_consoles_et_marques(CONFIG_PATH)
 
     # Première exécution : aucune annonce connue pour eBay -> on apprend ce qui
     # existe déjà sans envoyer une notification par annonce (pour ne pas noyer
@@ -86,24 +109,37 @@ def executer_veille_ebay(annonces_vues: dict) -> None:
     if premiere_execution:
         print("[eBay] Première exécution : les annonces déjà en ligne seront mémorisées sans notification.")
 
+    # Un même objet a le même identifiant eBay quel que soit le marketplace
+    # utilisé pour le trouver : un seul ensemble suffit pour tous les pays.
     vues_ebay = set(annonces_vues.get("ebay", []))
-    print(f"[eBay] {len(recherches)} recherches à effectuer.")
 
-    for mot_cle in recherches:
-        annonces = rechercher(mot_cle)
+    def traiter_recherche(mot_cle: str, marketplace: str) -> None:
+        annonces = rechercher(mot_cle, marketplace=marketplace)
         nouvelles = [a for a in annonces if a["id"] and a["id"] not in vues_ebay]
 
         for annonce in nouvelles:
             if not premiere_execution:
                 prix = f"{annonce['prix']} {annonce['devise']}" if annonce["prix"] else "prix non précisé"
                 envoyer_notification(
-                    titre=f"eBay : {mot_cle}",
+                    titre=f"eBay {NOMS_MARKETPLACES.get(marketplace, marketplace)} : {mot_cle}",
                     message=f"{annonce['titre']} — {prix}",
                     lien=annonce["lien"],
                 )
             vues_ebay.add(annonce["id"])
 
         time.sleep(PAUSE_ENTRE_RECHERCHES_SECONDES)
+
+    print(f"[eBay] France : {len(recherches_completes)} recherches (champ lexical complet).")
+    for mot_cle in recherches_completes:
+        traiter_recherche(mot_cle, "EBAY_FR")
+
+    print(
+        f"[eBay] Autres pays UE ({', '.join(NOMS_MARKETPLACES[m] for m in MARKETPLACES_SUPPLEMENTAIRES)}) : "
+        f"{len(consoles_et_marques)} recherches (noms de consoles/marques uniquement)."
+    )
+    for marketplace in MARKETPLACES_SUPPLEMENTAIRES:
+        for mot_cle in consoles_et_marques:
+            traiter_recherche(mot_cle, marketplace)
 
     annonces_vues["ebay"] = sorted(vues_ebay)
     print(f"[eBay] Terminé. {len(vues_ebay)} annonces au total mémorisées.")

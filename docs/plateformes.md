@@ -592,8 +592,8 @@ Sources : [2ememain.be Professionnel — API Admarkt](https://www.2ememainprofes
 | Connexion obligatoire | Même compte développeur eBay que pour la France |
 | Fréquence recommandée | Identique à eBay France (quelques fois par jour, dans les quotas gratuits) |
 | Risque de blocage | Très faible (méthode 100 % officielle) |
-| **Méthode retenue** | Étendre la logique déjà prévue pour eBay France (Browse API) à ces marketplaces, avec le même compte développeur, en changeant simplement l'identifiant de marketplace dans la requête |
-| Limitations | Léger travail de développement supplémentaire pour gérer plusieurs identifiants de marketplace ; aucune nouvelle inscription nécessaire |
+| **Méthode retenue** | Implémenté dans `scripts/main.py` : ces 5 marketplaces reçoivent uniquement les **noms de consoles/marques** de `config/search_phrases.yml` (26 termes, universels d'une langue à l'autre), pas les recherches vagues/contextuelles. Seule eBay France reçoit le champ lexical complet (162 recherches) |
+| Limitations | Le champ lexical est entièrement en français : les recherches vagues et contextuelles ("vieille console", "trouvé dans le grenier"...) ne matcheraient presque rien chez un vendeur allemand, espagnol, italien ou anglais, d'où la restriction aux seuls noms de consoles/marques pour ces 5 pays. Ce choix limite aussi le nombre total d'appels/jour, bien en dessous du quota gratuit eBay |
 | Coût | Gratuit dans les mêmes limites de quota développeur |
 
 Sources : [eBay Developers — MarketplaceIdEnum (Browse API)](https://developer.ebay.com/api-docs/buy/browse/types/ba:MarketplaceIdEnum)
