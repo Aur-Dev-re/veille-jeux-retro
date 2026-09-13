@@ -4,12 +4,12 @@
     "nombre": 40
   },
   "EBAY_BE::Amiga::complet": {
-    "moyenne": 94.62497233203459,
-    "nombre": 1859
+    "moyenne": 87.04317779388926,
+    "nombre": 1864
   },
   "EBAY_BE::Amiga::indetermine": {
-    "moyenne": 163.72270029827652,
-    "nombre": 2604
+    "moyenne": 139.7498829339945,
+    "nombre": 2619
   },
   "EBAY_BE::Amiga::loose": {
     "moyenne": 60.157132766935206,
@@ -20,12 +20,12 @@
     "nombre": 40
   },
   "EBAY_BE::Atari 2600::complet": {
-    "moyenne": 153.39269595136858,
-    "nombre": 882
+    "moyenne": 76.45700300407026,
+    "nombre": 895
   },
   "EBAY_BE::Atari 2600::indetermine": {
-    "moyenne": 298.95279634513236,
-    "nombre": 3542
+    "moyenne": 166.49538313863349,
+    "nombre": 3549
   },
   "EBAY_BE::Atari 2600::loose": {
     "moyenne": 54.22324758547975,
@@ -36,12 +36,12 @@
     "nombre": 40
   },
   "EBAY_BE::Atari ST::complet": {
-    "moyenne": 87.7578084890452,
-    "nombre": 2120
+    "moyenne": 108.16685643426742,
+    "nombre": 2126
   },
   "EBAY_BE::Atari ST::indetermine": {
-    "moyenne": 84.94418247523957,
-    "nombre": 2376
+    "moyenne": 80.38664228024697,
+    "nombre": 2390
   },
   "EBAY_BE::Atari ST::loose": {
     "moyenne": 16.9,
@@ -52,12 +52,12 @@
     "nombre": 40
   },
   "EBAY_BE::Dreamcast::complet": {
-    "moyenne": 119.37065267663058,
-    "nombre": 1149
+    "moyenne": 101.7765215588656,
+    "nombre": 1151
   },
   "EBAY_BE::Dreamcast::indetermine": {
-    "moyenne": 350.6486527635785,
-    "nombre": 3305
+    "moyenne": 226.6516619048254,
+    "nombre": 3323
   },
   "EBAY_BE::Dreamcast::loose": {
     "moyenne": 160.7975404068482,
@@ -76,8 +76,8 @@
     "nombre": 284
   },
   "EBAY_BE::Game Boy Advance::indetermine": {
-    "moyenne": 109.26114154124151,
-    "nombre": 4196
+    "moyenne": 115.74776750644857,
+    "nombre": 4216
   },
   "EBAY_BE::Game Boy Advance::loose": {
     "moyenne": 47.80675470730904,
@@ -88,24 +88,24 @@
     "nombre": 40
   },
   "EBAY_BE::Game Boy Color::complet": {
-    "moyenne": 200.01406195503995,
-    "nombre": 229
+    "moyenne": 207.36195266178396,
+    "nombre": 230
   },
   "EBAY_BE::Game Boy Color::indetermine": {
-    "moyenne": 112.26370780751698,
-    "nombre": 4259
+    "moyenne": 106.96441944594866,
+    "nombre": 4278
   },
   "EBAY_BE::Game Boy Color::loose": {
     "moyenne": 67.6821351898761,
     "nombre": 12
   },
   "EBAY_BE::Game Boy::complet": {
-    "moyenne": 182.5467663911717,
-    "nombre": 273
+    "moyenne": 173.91475143249593,
+    "nombre": 274
   },
   "EBAY_BE::Game Boy::indetermine": {
-    "moyenne": 154.69316761697075,
-    "nombre": 4153
+    "moyenne": 88.99156218292211,
+    "nombre": 4172
   },
   "EBAY_BE::Game Boy::loose": {
     "moyenne": 72.30789990055544,
@@ -116,12 +116,12 @@
     "nombre": 40
   },
   "EBAY_BE::GameCube::complet": {
-    "moyenne": 160.29357505747475,
-    "nombre": 736
+    "moyenne": 117.80265626574403,
+    "nombre": 741
   },
   "EBAY_BE::GameCube::indetermine": {
-    "moyenne": 145.55462888616415,
-    "nombre": 3642
+    "moyenne": 73.11141773816463,
+    "nombre": 3657
   },
   "EBAY_BE::GameCube::loose": {
     "moyenne": 103.87640825799653,
@@ -132,12 +132,12 @@
     "nombre": 40
   },
   "EBAY_BE::Master System::complet": {
-    "moyenne": 89.82395810085639,
-    "nombre": 1684
+    "moyenne": 102.31872732051198,
+    "nombre": 1695
   },
   "EBAY_BE::Master System::indetermine": {
-    "moyenne": 66.3431988875057,
-    "nombre": 2784
+    "moyenne": 83.69604471400574,
+    "nombre": 2793
   },
   "EBAY_BE::Master System::loose": {
     "moyenne": 29.851884245375054,
@@ -148,12 +148,12 @@
     "nombre": 40
   },
   "EBAY_BE::Mega Drive::complet": {
-    "moyenne": 92.6910924656092,
-    "nombre": 1011
+    "moyenne": 138.55081430640263,
+    "nombre": 1013
   },
   "EBAY_BE::Mega Drive::indetermine": {
-    "moyenne": 53.91620058812419,
-    "nombre": 3462
+    "moyenne": 51.58014686387237,
+    "nombre": 3480
   },
   "EBAY_BE::Mega Drive::loose": {
     "moyenne": 43.38091607341735,
@@ -164,12 +164,12 @@
     "nombre": 40
   },
   "EBAY_BE::NES::complet": {
-    "moyenne": 108.98538913583126,
-    "nombre": 1096
+    "moyenne": 98.89957021168713,
+    "nombre": 1102
   },
   "EBAY_BE::NES::indetermine": {
-    "moyenne": 111.81895988311405,
-    "nombre": 3298
+    "moyenne": 72.01899937253134,
+    "nombre": 3312
   },
   "EBAY_BE::NES::loose": {
     "moyenne": 125.95009557808288,
@@ -180,12 +180,12 @@
     "nombre": 40
   },
   "EBAY_BE::Neo Geo::complet": {
-    "moyenne": 230.1505143533093,
-    "nombre": 1456
+    "moyenne": 188.53463262064216,
+    "nombre": 1460
   },
   "EBAY_BE::Neo Geo::indetermine": {
-    "moyenne": 270.92978185810864,
-    "nombre": 3015
+    "moyenne": 354.4101184196098,
+    "nombre": 3031
   },
   "EBAY_BE::Neo Geo::loose": {
     "moyenne": 250.1245741264482,
@@ -196,12 +196,12 @@
     "nombre": 40
   },
   "EBAY_BE::Nintendo 3DS::complet": {
-    "moyenne": 177.59572656061928,
-    "nombre": 345
+    "moyenne": 180.9413675765264,
+    "nombre": 346
   },
   "EBAY_BE::Nintendo 3DS::indetermine": {
-    "moyenne": 175.33118569785918,
-    "nombre": 4137
+    "moyenne": 221.09217737063452,
+    "nombre": 4156
   },
   "EBAY_BE::Nintendo 3DS::loose": {
     "moyenne": 52.64542007412546,
@@ -212,12 +212,12 @@
     "nombre": 40
   },
   "EBAY_BE::Nintendo 64::complet": {
-    "moyenne": 137.52775864367433,
-    "nombre": 602
+    "moyenne": 134.89709484712318,
+    "nombre": 603
   },
   "EBAY_BE::Nintendo 64::indetermine": {
-    "moyenne": 189.74307076449116,
-    "nombre": 3837
+    "moyenne": 62.05491789227931,
+    "nombre": 3856
   },
   "EBAY_BE::Nintendo 64::loose": {
     "moyenne": 56.94669143825693,
@@ -232,8 +232,8 @@
     "nombre": 132
   },
   "EBAY_BE::Nintendo DS::indetermine": {
-    "moyenne": 117.12070682944605,
-    "nombre": 4351
+    "moyenne": 50.61296934972387,
+    "nombre": 4371
   },
   "EBAY_BE::Nintendo DS::loose": {
     "moyenne": 45.14258534601475,
@@ -244,12 +244,12 @@
     "nombre": 40
   },
   "EBAY_BE::PS Vita::complet": {
-    "moyenne": 181.37027394256114,
-    "nombre": 386
+    "moyenne": 180.39973285117696,
+    "nombre": 387
   },
   "EBAY_BE::PS Vita::indetermine": {
-    "moyenne": 171.27702484621696,
-    "nombre": 4046
+    "moyenne": 179.73573799031692,
+    "nombre": 4065
   },
   "EBAY_BE::PS Vita::loose": {
     "moyenne": 99.30477938929643,
@@ -260,12 +260,12 @@
     "nombre": 40
   },
   "EBAY_BE::PSP::complet": {
-    "moyenne": 86.16433594447936,
-    "nombre": 349
+    "moyenne": 79.15438271988634,
+    "nombre": 351
   },
   "EBAY_BE::PSP::indetermine": {
-    "moyenne": 41.21950292233359,
-    "nombre": 4135
+    "moyenne": 40.29868480107707,
+    "nombre": 4153
   },
   "EBAY_BE::PSP::loose": {
     "moyenne": 72.8489560727495,
@@ -276,12 +276,12 @@
     "nombre": 40
   },
   "EBAY_BE::PlayStation 1::complet": {
-    "moyenne": 133.59993668106375,
-    "nombre": 1219
+    "moyenne": 107.79724856843103,
+    "nombre": 1226
   },
   "EBAY_BE::PlayStation 1::indetermine": {
-    "moyenne": 100.81034471919895,
-    "nombre": 3234
+    "moyenne": 59.22832258891792,
+    "nombre": 3247
   },
   "EBAY_BE::PlayStation 1::loose": {
     "moyenne": 98.86357685298422,
@@ -292,12 +292,12 @@
     "nombre": 40
   },
   "EBAY_BE::PlayStation 2::complet": {
-    "moyenne": 84.25570906540217,
-    "nombre": 1425
+    "moyenne": 73.43230859577335,
+    "nombre": 1430
   },
   "EBAY_BE::PlayStation 2::indetermine": {
-    "moyenne": 72.72606389980258,
-    "nombre": 3045
+    "moyenne": 65.36526175699625,
+    "nombre": 3060
   },
   "EBAY_BE::PlayStation 2::loose": {
     "moyenne": 168.11300242794513,
@@ -308,12 +308,12 @@
     "nombre": 40
   },
   "EBAY_BE::PlayStation 3::complet": {
-    "moyenne": 90.84215410232706,
-    "nombre": 911
+    "moyenne": 87.53113652896174,
+    "nombre": 917
   },
   "EBAY_BE::PlayStation 3::indetermine": {
-    "moyenne": 79.18817507536313,
-    "nombre": 3568
+    "moyenne": 55.21323627492431,
+    "nombre": 3582
   },
   "EBAY_BE::PlayStation 3::loose": {
     "moyenne": 84.49621379483744,
@@ -324,32 +324,32 @@
     "nombre": 40
   },
   "EBAY_BE::Saturn::complet": {
-    "moyenne": 92.6564985776451,
-    "nombre": 1710
+    "moyenne": 86.02830230267173,
+    "nombre": 1719
   },
   "EBAY_BE::Saturn::indetermine": {
-    "moyenne": 241.8212700926342,
-    "nombre": 2748
+    "moyenne": 202.74399248724336,
+    "nombre": 2758
   },
   "EBAY_BE::Saturn::loose": {
-    "moyenne": 165.93870841323786,
-    "nombre": 42
+    "moyenne": 163.67990215125218,
+    "nombre": 43
   },
   "EBAY_BE::Super Nintendo": {
     "moyenne": 75.67202964183895,
     "nombre": 40
   },
   "EBAY_BE::Super Nintendo::complet": {
-    "moyenne": 163.80624287217253,
-    "nombre": 680
+    "moyenne": 156.116704193292,
+    "nombre": 684
   },
   "EBAY_BE::Super Nintendo::indetermine": {
-    "moyenne": 130.7317719593286,
-    "nombre": 3741
+    "moyenne": 91.06707293608933,
+    "nombre": 3756
   },
   "EBAY_BE::Super Nintendo::loose": {
-    "moyenne": 185.46858494096105,
-    "nombre": 79
+    "moyenne": 215.8422971998169,
+    "nombre": 80
   },
   "EBAY_BE::Wii": {
     "moyenne": 123.57871170574126,
@@ -360,28 +360,28 @@
     "nombre": 40
   },
   "EBAY_BE::Wii U::complet": {
-    "moyenne": 159.53856131560605,
-    "nombre": 365
+    "moyenne": 160.87853555052536,
+    "nombre": 367
   },
   "EBAY_BE::Wii U::indetermine": {
-    "moyenne": 57.52132439076247,
-    "nombre": 4061
+    "moyenne": 80.36643022048615,
+    "nombre": 4079
   },
   "EBAY_BE::Wii U::loose": {
     "moyenne": 65.80664296881848,
     "nombre": 74
   },
   "EBAY_BE::Wii::complet": {
-    "moyenne": 56.26175874250133,
-    "nombre": 776
+    "moyenne": 65.00893344957784,
+    "nombre": 780
   },
   "EBAY_BE::Wii::indetermine": {
-    "moyenne": 34.3089776711041,
-    "nombre": 3707
+    "moyenne": 54.68792328914522,
+    "nombre": 3722
   },
   "EBAY_BE::Wii::loose": {
-    "moyenne": 40.75450536196439,
-    "nombre": 17
+    "moyenne": 39.336329557669735,
+    "nombre": 18
   },
   "EBAY_BE::Xbox": {
     "moyenne": 79.21463013606686,
@@ -392,12 +392,12 @@
     "nombre": 40
   },
   "EBAY_BE::Xbox 360::complet": {
-    "moyenne": 80.74795072581443,
-    "nombre": 647
+    "moyenne": 88.68188745356717,
+    "nombre": 651
   },
   "EBAY_BE::Xbox 360::indetermine": {
-    "moyenne": 107.41848076383323,
-    "nombre": 3840
+    "moyenne": 146.99697134003347,
+    "nombre": 3856
   },
   "EBAY_BE::Xbox 360::loose": {
     "moyenne": 24.195135682857686,
@@ -408,8 +408,8 @@
     "nombre": 199
   },
   "EBAY_BE::Xbox::indetermine": {
-    "moyenne": 52.37638348398025,
-    "nombre": 4297
+    "moyenne": 57.55010326774699,
+    "nombre": 4317
   },
   "EBAY_BE::Xbox::loose": {
     "moyenne": 3.48,
@@ -420,24 +420,24 @@
     "nombre": 40
   },
   "EBAY_DE::Amiga::complet": {
-    "moyenne": 45.05619876468193,
-    "nombre": 1204
+    "moyenne": 44.461888066360295,
+    "nombre": 1207
   },
   "EBAY_DE::Amiga::indetermine": {
-    "moyenne": 186.55106551037602,
-    "nombre": 3356
+    "moyenne": 180.93571839492432,
+    "nombre": 3373
   },
   "EBAY_DE::Atari 2600": {
     "moyenne": 107.81723066638617,
     "nombre": 40
   },
   "EBAY_DE::Atari 2600::complet": {
-    "moyenne": 62.87225018514053,
-    "nombre": 1119
+    "moyenne": 64.09213636070702,
+    "nombre": 1123
   },
   "EBAY_DE::Atari 2600::indetermine": {
-    "moyenne": 99.75818544991365,
-    "nombre": 3439
+    "moyenne": 84.7443081990568,
+    "nombre": 3455
   },
   "EBAY_DE::Atari 2600::loose": {
     "moyenne": 70.0,
@@ -448,24 +448,24 @@
     "nombre": 40
   },
   "EBAY_DE::Atari ST::complet": {
-    "moyenne": 93.42517372661942,
-    "nombre": 1445
+    "moyenne": 111.88810981486014,
+    "nombre": 1448
   },
   "EBAY_DE::Atari ST::indetermine": {
-    "moyenne": 100.01994108644439,
-    "nombre": 3115
+    "moyenne": 143.6241978140231,
+    "nombre": 3132
   },
   "EBAY_DE::Dreamcast": {
     "moyenne": 92.92947859542559,
     "nombre": 40
   },
   "EBAY_DE::Dreamcast::complet": {
-    "moyenne": 100.50389747124932,
-    "nombre": 1393
+    "moyenne": 120.6263621354876,
+    "nombre": 1399
   },
   "EBAY_DE::Dreamcast::indetermine": {
-    "moyenne": 75.13089154027504,
-    "nombre": 3166
+    "moyenne": 59.78333755018294,
+    "nombre": 3180
   },
   "EBAY_DE::Dreamcast::loose": {
     "moyenne": 14.99,
@@ -480,44 +480,44 @@
     "nombre": 40
   },
   "EBAY_DE::Game Boy Advance::complet": {
-    "moyenne": 168.86365573072842,
-    "nombre": 587
+    "moyenne": 167.53260737111916,
+    "nombre": 588
   },
   "EBAY_DE::Game Boy Advance::indetermine": {
-    "moyenne": 138.78899585304688,
-    "nombre": 3973
+    "moyenne": 136.83341348202336,
+    "nombre": 3992
   },
   "EBAY_DE::Game Boy Color": {
     "moyenne": 110.25883767782315,
     "nombre": 40
   },
   "EBAY_DE::Game Boy Color::complet": {
-    "moyenne": 149.43489113103612,
-    "nombre": 206
+    "moyenne": 149.3696574613807,
+    "nombre": 207
   },
   "EBAY_DE::Game Boy Color::indetermine": {
-    "moyenne": 112.40703880202177,
-    "nombre": 4354
+    "moyenne": 97.86280360999267,
+    "nombre": 4373
   },
   "EBAY_DE::Game Boy::complet": {
     "moyenne": 238.41899039113846,
     "nombre": 347
   },
   "EBAY_DE::Game Boy::indetermine": {
-    "moyenne": 82.61214134090056,
-    "nombre": 4213
+    "moyenne": 78.05230382181163,
+    "nombre": 4233
   },
   "EBAY_DE::GameCube": {
     "moyenne": 65.14611319159425,
     "nombre": 40
   },
   "EBAY_DE::GameCube::complet": {
-    "moyenne": 110.94673667576436,
-    "nombre": 660
+    "moyenne": 98.8047261743997,
+    "nombre": 661
   },
   "EBAY_DE::GameCube::indetermine": {
-    "moyenne": 75.93548489904427,
-    "nombre": 3919
+    "moyenne": 87.91400142269035,
+    "nombre": 3938
   },
   "EBAY_DE::GameCube::loose": {
     "moyenne": 145.0,
@@ -528,48 +528,48 @@
     "nombre": 40
   },
   "EBAY_DE::Master System::complet": {
-    "moyenne": 114.23766109822951,
-    "nombre": 1885
+    "moyenne": 125.81396701323642,
+    "nombre": 1891
   },
   "EBAY_DE::Master System::indetermine": {
-    "moyenne": 42.03263341530191,
-    "nombre": 2675
+    "moyenne": 47.03206588198586,
+    "nombre": 2689
   },
   "EBAY_DE::Mega Drive": {
     "moyenne": 61.06296443559008,
     "nombre": 40
   },
   "EBAY_DE::Mega Drive::complet": {
-    "moyenne": 130.5466317456472,
-    "nombre": 1522
+    "moyenne": 163.09948732509594,
+    "nombre": 1531
   },
   "EBAY_DE::Mega Drive::indetermine": {
-    "moyenne": 48.80557606970102,
-    "nombre": 3038
+    "moyenne": 50.55114662815766,
+    "nombre": 3049
   },
   "EBAY_DE::NES": {
     "moyenne": 89.21527767733888,
     "nombre": 40
   },
   "EBAY_DE::NES::complet": {
-    "moyenne": 278.7940535227503,
-    "nombre": 1413
+    "moyenne": 270.7412951102037,
+    "nombre": 1418
   },
   "EBAY_DE::NES::indetermine": {
-    "moyenne": 77.9454653896487,
-    "nombre": 3147
+    "moyenne": 90.70451218933059,
+    "nombre": 3162
   },
   "EBAY_DE::Neo Geo": {
     "moyenne": 294.0741848337495,
     "nombre": 40
   },
   "EBAY_DE::Neo Geo::complet": {
-    "moyenne": 246.83096839979896,
-    "nombre": 1314
+    "moyenne": 268.71401103101044,
+    "nombre": 1319
   },
   "EBAY_DE::Neo Geo::indetermine": {
-    "moyenne": 459.3964129075813,
-    "nombre": 3242
+    "moyenne": 460.26614450062596,
+    "nombre": 3257
   },
   "EBAY_DE::Neo Geo::loose": {
     "moyenne": 232.11395,
@@ -580,24 +580,24 @@
     "nombre": 40
   },
   "EBAY_DE::Nintendo 3DS::complet": {
-    "moyenne": 169.44346753642316,
-    "nombre": 343
+    "moyenne": 160.24540529506575,
+    "nombre": 345
   },
   "EBAY_DE::Nintendo 3DS::indetermine": {
-    "moyenne": 184.8769601536506,
-    "nombre": 4217
+    "moyenne": 180.76732190961934,
+    "nombre": 4235
   },
   "EBAY_DE::Nintendo 64": {
     "moyenne": 186.4618217928066,
     "nombre": 40
   },
   "EBAY_DE::Nintendo 64::complet": {
-    "moyenne": 125.31514903739253,
-    "nombre": 826
+    "moyenne": 154.37120715258868,
+    "nombre": 829
   },
   "EBAY_DE::Nintendo 64::indetermine": {
-    "moyenne": 106.18012602041497,
-    "nombre": 3774
+    "moyenne": 133.30839330761947,
+    "nombre": 3791
   },
   "EBAY_DE::Nintendo DS": {
     "moyenne": 70.36327479667536,
@@ -608,32 +608,32 @@
     "nombre": 208
   },
   "EBAY_DE::Nintendo DS::indetermine": {
-    "moyenne": 69.84401680651163,
-    "nombre": 4352
+    "moyenne": 60.435113631948035,
+    "nombre": 4372
   },
   "EBAY_DE::PS Vita": {
     "moyenne": 133.76963318805633,
     "nombre": 40
   },
   "EBAY_DE::PS Vita::complet": {
-    "moyenne": 196.026089668339,
-    "nombre": 338
+    "moyenne": 203.5724686244434,
+    "nombre": 343
   },
   "EBAY_DE::PS Vita::indetermine": {
-    "moyenne": 104.2426918300191,
-    "nombre": 4222
+    "moyenne": 156.23155156911983,
+    "nombre": 4237
   },
   "EBAY_DE::PSP": {
     "moyenne": 75.0787244339972,
     "nombre": 40
   },
   "EBAY_DE::PSP::complet": {
-    "moyenne": 45.729374521230966,
-    "nombre": 539
+    "moyenne": 42.96069809158938,
+    "nombre": 541
   },
   "EBAY_DE::PSP::indetermine": {
-    "moyenne": 73.41950971604919,
-    "nombre": 4020
+    "moyenne": 86.83101860598607,
+    "nombre": 4038
   },
   "EBAY_DE::PSP::loose": {
     "moyenne": 5.99,
@@ -644,12 +644,12 @@
     "nombre": 40
   },
   "EBAY_DE::PlayStation 1::complet": {
-    "moyenne": 128.02491938209963,
-    "nombre": 341
+    "moyenne": 135.0561814747847,
+    "nombre": 342
   },
   "EBAY_DE::PlayStation 1::indetermine": {
-    "moyenne": 53.749693838786015,
-    "nombre": 4236
+    "moyenne": 59.0058922841578,
+    "nombre": 4255
   },
   "EBAY_DE::PlayStation 1::loose": {
     "moyenne": 282.65,
@@ -660,36 +660,36 @@
     "nombre": 40
   },
   "EBAY_DE::PlayStation 2::complet": {
-    "moyenne": 171.9802197419342,
-    "nombre": 285
+    "moyenne": 246.79783376354743,
+    "nombre": 287
   },
   "EBAY_DE::PlayStation 2::indetermine": {
-    "moyenne": 36.741826581491424,
-    "nombre": 4315
+    "moyenne": 41.360532236998196,
+    "nombre": 4333
   },
   "EBAY_DE::PlayStation 3": {
     "moyenne": 55.722054568269726,
     "nombre": 40
   },
   "EBAY_DE::PlayStation 3::complet": {
-    "moyenne": 78.23205924684858,
-    "nombre": 338
+    "moyenne": 73.24575035982129,
+    "nombre": 339
   },
   "EBAY_DE::PlayStation 3::indetermine": {
-    "moyenne": 96.3688137696433,
-    "nombre": 4242
+    "moyenne": 98.6044216827632,
+    "nombre": 4261
   },
   "EBAY_DE::Saturn": {
     "moyenne": 132.96393152772936,
     "nombre": 40
   },
   "EBAY_DE::Saturn::complet": {
-    "moyenne": 129.70508437010045,
-    "nombre": 1384
+    "moyenne": 137.1173856456894,
+    "nombre": 1390
   },
   "EBAY_DE::Saturn::indetermine": {
-    "moyenne": 147.81598986300864,
-    "nombre": 3175
+    "moyenne": 151.41341908810168,
+    "nombre": 3189
   },
   "EBAY_DE::Saturn::loose": {
     "moyenne": 53.69,
@@ -700,12 +700,12 @@
     "nombre": 40
   },
   "EBAY_DE::Super Nintendo::complet": {
-    "moyenne": 87.79017936231881,
-    "nombre": 666
+    "moyenne": 86.08975737825143,
+    "nombre": 670
   },
   "EBAY_DE::Super Nintendo::indetermine": {
-    "moyenne": 75.57405534628987,
-    "nombre": 3894
+    "moyenne": 90.79435734315084,
+    "nombre": 3910
   },
   "EBAY_DE::Wii": {
     "moyenne": 69.82647292872423,
@@ -716,20 +716,20 @@
     "nombre": 40
   },
   "EBAY_DE::Wii U::complet": {
-    "moyenne": 108.71976630799601,
-    "nombre": 448
+    "moyenne": 118.66030136179661,
+    "nombre": 449
   },
   "EBAY_DE::Wii U::indetermine": {
-    "moyenne": 84.71505990676165,
-    "nombre": 4112
+    "moyenne": 102.29684478428928,
+    "nombre": 4131
   },
   "EBAY_DE::Wii::complet": {
     "moyenne": 27.39731986251453,
     "nombre": 103
   },
   "EBAY_DE::Wii::indetermine": {
-    "moyenne": 75.06613965721056,
-    "nombre": 4457
+    "moyenne": 99.58080089769238,
+    "nombre": 4477
   },
   "EBAY_DE::Xbox": {
     "moyenne": 98.77483467015637,
@@ -740,32 +740,32 @@
     "nombre": 40
   },
   "EBAY_DE::Xbox 360::complet": {
-    "moyenne": 131.40593821526278,
-    "nombre": 181
+    "moyenne": 137.94354748297337,
+    "nombre": 182
   },
   "EBAY_DE::Xbox 360::indetermine": {
-    "moyenne": 34.32764617975108,
-    "nombre": 4379
+    "moyenne": 38.398136029335866,
+    "nombre": 4398
   },
   "EBAY_DE::Xbox::complet": {
-    "moyenne": 79.61040530182899,
-    "nombre": 301
+    "moyenne": 107.30224283057143,
+    "nombre": 303
   },
   "EBAY_DE::Xbox::indetermine": {
-    "moyenne": 65.295456353763,
-    "nombre": 4259
+    "moyenne": 73.13990090288576,
+    "nombre": 4277
   },
   "EBAY_ES::Amiga": {
     "moyenne": 167.8145435383195,
     "nombre": 40
   },
   "EBAY_ES::Amiga::complet": {
-    "moyenne": 402.525704036574,
-    "nombre": 1306
+    "moyenne": 409.699772991461,
+    "nombre": 1309
   },
   "EBAY_ES::Amiga::indetermine": {
-    "moyenne": 291.1248155164098,
-    "nombre": 3230
+    "moyenne": 263.15898550492943,
+    "nombre": 3247
   },
   "EBAY_ES::Amiga::loose": {
     "moyenne": 33.069322500000006,
@@ -776,12 +776,12 @@
     "nombre": 40
   },
   "EBAY_ES::Atari 2600::complet": {
-    "moyenne": 149.5445679598988,
-    "nombre": 484
+    "moyenne": 70.2112543649964,
+    "nombre": 495
   },
   "EBAY_ES::Atari 2600::indetermine": {
-    "moyenne": 168.47776893970624,
-    "nombre": 4023
+    "moyenne": 135.44120054328707,
+    "nombre": 4032
   },
   "EBAY_ES::Atari 2600::loose": {
     "moyenne": 24.015877743138034,
@@ -792,12 +792,12 @@
     "nombre": 40
   },
   "EBAY_ES::Atari ST::complet": {
-    "moyenne": 123.4836432735654,
-    "nombre": 1170
+    "moyenne": 129.20298242537837,
+    "nombre": 1173
   },
   "EBAY_ES::Atari ST::indetermine": {
-    "moyenne": 155.96232679352812,
-    "nombre": 3387
+    "moyenne": 160.77328680976825,
+    "nombre": 3404
   },
   "EBAY_ES::Atari ST::loose": {
     "moyenne": 16.9,
@@ -808,12 +808,12 @@
     "nombre": 40
   },
   "EBAY_ES::Dreamcast::complet": {
-    "moyenne": 114.24571216300217,
-    "nombre": 553
+    "moyenne": 127.10885533855185,
+    "nombre": 554
   },
   "EBAY_ES::Dreamcast::indetermine": {
-    "moyenne": 202.26321542458933,
-    "nombre": 3993
+    "moyenne": 209.70606498156332,
+    "nombre": 4012
   },
   "EBAY_ES::Dreamcast::loose": {
     "moyenne": 50.488943379418124,
@@ -828,12 +828,12 @@
     "nombre": 40
   },
   "EBAY_ES::Game Boy Advance::complet": {
-    "moyenne": 143.5359376320935,
-    "nombre": 142
+    "moyenne": 140.75554698727947,
+    "nombre": 143
   },
   "EBAY_ES::Game Boy Advance::indetermine": {
-    "moyenne": 90.11815322363687,
-    "nombre": 4411
+    "moyenne": 114.02075861669783,
+    "nombre": 4430
   },
   "EBAY_ES::Game Boy Advance::loose": {
     "moyenne": 64.31887633874999,
@@ -844,24 +844,24 @@
     "nombre": 40
   },
   "EBAY_ES::Game Boy Color::complet": {
-    "moyenne": 206.82351020177853,
-    "nombre": 116
+    "moyenne": 213.14998367151176,
+    "nombre": 117
   },
   "EBAY_ES::Game Boy Color::indetermine": {
-    "moyenne": 147.82251971889707,
-    "nombre": 4435
+    "moyenne": 104.6922523187537,
+    "nombre": 4454
   },
   "EBAY_ES::Game Boy Color::loose": {
     "moyenne": 62.15836401850663,
     "nombre": 9
   },
   "EBAY_ES::Game Boy::complet": {
-    "moyenne": 119.97032907581516,
-    "nombre": 238
+    "moyenne": 104.13619459368498,
+    "nombre": 241
   },
   "EBAY_ES::Game Boy::indetermine": {
-    "moyenne": 17.53629492241314,
-    "nombre": 4288
+    "moyenne": 845.6669254737437,
+    "nombre": 4305
   },
   "EBAY_ES::Game Boy::loose": {
     "moyenne": 31.340169170933308,
@@ -872,12 +872,12 @@
     "nombre": 40
   },
   "EBAY_ES::GameCube::complet": {
-    "moyenne": 118.68278206594327,
-    "nombre": 642
+    "moyenne": 104.28943504264402,
+    "nombre": 644
   },
   "EBAY_ES::GameCube::indetermine": {
-    "moyenne": 121.91454018647475,
-    "nombre": 3917
+    "moyenne": 123.62973421224213,
+    "nombre": 3935
   },
   "EBAY_ES::GameCube::loose": {
     "moyenne": 89.59,
@@ -888,12 +888,12 @@
     "nombre": 40
   },
   "EBAY_ES::Master System::complet": {
-    "moyenne": 116.53787301221101,
-    "nombre": 1066
+    "moyenne": 101.74522053865986,
+    "nombre": 1075
   },
   "EBAY_ES::Master System::indetermine": {
-    "moyenne": 126.60079191684598,
-    "nombre": 3477
+    "moyenne": 45.24775275182874,
+    "nombre": 3488
   },
   "EBAY_ES::Master System::loose": {
     "moyenne": 29.9,
@@ -904,12 +904,12 @@
     "nombre": 40
   },
   "EBAY_ES::Mega Drive::complet": {
-    "moyenne": 97.37743517457656,
-    "nombre": 826
+    "moyenne": 139.5340885200988,
+    "nombre": 830
   },
   "EBAY_ES::Mega Drive::indetermine": {
-    "moyenne": 72.76656606463743,
-    "nombre": 3716
+    "moyenne": 74.26736758378846,
+    "nombre": 3732
   },
   "EBAY_ES::Mega Drive::loose": {
     "moyenne": 49.762687443607305,
@@ -920,12 +920,12 @@
     "nombre": 40
   },
   "EBAY_ES::NES::complet": {
-    "moyenne": 111.58326131976959,
-    "nombre": 552
+    "moyenne": 119.52782988403632,
+    "nombre": 559
   },
   "EBAY_ES::NES::indetermine": {
-    "moyenne": 148.17634587533252,
-    "nombre": 3972
+    "moyenne": 111.87183758617306,
+    "nombre": 3985
   },
   "EBAY_ES::NES::loose": {
     "moyenne": 28.25727694515346,
@@ -940,8 +940,8 @@
     "nombre": 798
   },
   "EBAY_ES::Neo Geo::indetermine": {
-    "moyenne": 489.2957811929865,
-    "nombre": 3737
+    "moyenne": 501.04673322606556,
+    "nombre": 3757
   },
   "EBAY_ES::Neo Geo::loose": {
     "moyenne": 194.58125,
@@ -956,8 +956,8 @@
     "nombre": 184
   },
   "EBAY_ES::Nintendo 3DS::indetermine": {
-    "moyenne": 170.27870284296375,
-    "nombre": 4373
+    "moyenne": 181.72277842526364,
+    "nombre": 4393
   },
   "EBAY_ES::Nintendo 3DS::loose": {
     "moyenne": 124.4285,
@@ -968,12 +968,12 @@
     "nombre": 40
   },
   "EBAY_ES::Nintendo 64::complet": {
-    "moyenne": 587.107218030196,
-    "nombre": 390
+    "moyenne": 517.0396353256666,
+    "nombre": 391
   },
   "EBAY_ES::Nintendo 64::indetermine": {
-    "moyenne": 113.19037558632151,
-    "nombre": 4148
+    "moyenne": 93.7898078311897,
+    "nombre": 4167
   },
   "EBAY_ES::Nintendo 64::loose": {
     "moyenne": 58.778389335300844,
@@ -988,8 +988,8 @@
     "nombre": 145
   },
   "EBAY_ES::Nintendo DS::indetermine": {
-    "moyenne": 34.62093739021823,
-    "nombre": 4398
+    "moyenne": 60.556872700381106,
+    "nombre": 4418
   },
   "EBAY_ES::Nintendo DS::loose": {
     "moyenne": 32.8154454516524,
@@ -1000,24 +1000,24 @@
     "nombre": 40
   },
   "EBAY_ES::PS Vita::complet": {
-    "moyenne": 192.79033470323148,
-    "nombre": 531
+    "moyenne": 191.61580304962203,
+    "nombre": 534
   },
   "EBAY_ES::PS Vita::indetermine": {
-    "moyenne": 163.26201266880878,
-    "nombre": 4029
+    "moyenne": 193.39721907836656,
+    "nombre": 4046
   },
   "EBAY_ES::PSP": {
     "moyenne": 79.4533167009496,
     "nombre": 40
   },
   "EBAY_ES::PSP::complet": {
-    "moyenne": 117.76576945211899,
-    "nombre": 459
+    "moyenne": 136.16226842915597,
+    "nombre": 461
   },
   "EBAY_ES::PSP::indetermine": {
-    "moyenne": 63.21686886636971,
-    "nombre": 4090
+    "moyenne": 61.18647149254539,
+    "nombre": 4108
   },
   "EBAY_ES::PSP::loose": {
     "moyenne": 104.00488375,
@@ -1028,12 +1028,12 @@
     "nombre": 40
   },
   "EBAY_ES::PlayStation 1::complet": {
-    "moyenne": 101.64853321646505,
-    "nombre": 1012
+    "moyenne": 83.79244020720651,
+    "nombre": 1018
   },
   "EBAY_ES::PlayStation 1::indetermine": {
-    "moyenne": 73.46023210049233,
-    "nombre": 3546
+    "moyenne": 73.04363872238243,
+    "nombre": 3560
   },
   "EBAY_ES::PlayStation 1::loose": {
     "moyenne": 24.9,
@@ -1044,12 +1044,12 @@
     "nombre": 40
   },
   "EBAY_ES::PlayStation 2::complet": {
-    "moyenne": 76.76219325977294,
-    "nombre": 1287
+    "moyenne": 74.953566084361,
+    "nombre": 1293
   },
   "EBAY_ES::PlayStation 2::indetermine": {
-    "moyenne": 99.33550293176279,
-    "nombre": 3270
+    "moyenne": 67.91258646305997,
+    "nombre": 3284
   },
   "EBAY_ES::PlayStation 2::loose": {
     "moyenne": 39.9,
@@ -1060,24 +1060,24 @@
     "nombre": 40
   },
   "EBAY_ES::PlayStation 3::complet": {
-    "moyenne": 75.43879562739902,
-    "nombre": 465
+    "moyenne": 83.60797628328916,
+    "nombre": 466
   },
   "EBAY_ES::PlayStation 3::indetermine": {
-    "moyenne": 83.13840061545741,
-    "nombre": 4095
+    "moyenne": 73.79325702127879,
+    "nombre": 4114
   },
   "EBAY_ES::Saturn": {
     "moyenne": 101.46261299310967,
     "nombre": 40
   },
   "EBAY_ES::Saturn::complet": {
-    "moyenne": 204.5061019182396,
-    "nombre": 1117
+    "moyenne": 206.6882289908228,
+    "nombre": 1124
   },
   "EBAY_ES::Saturn::indetermine": {
-    "moyenne": 91.60005636017127,
-    "nombre": 3440
+    "moyenne": 95.36454196822706,
+    "nombre": 3453
   },
   "EBAY_ES::Saturn::loose": {
     "moyenne": 98.087825,
@@ -1088,12 +1088,12 @@
     "nombre": 40
   },
   "EBAY_ES::Super Nintendo::complet": {
-    "moyenne": 276.3529935677838,
-    "nombre": 389
+    "moyenne": 263.99704453261626,
+    "nombre": 390
   },
   "EBAY_ES::Super Nintendo::indetermine": {
-    "moyenne": 67.98797923112204,
-    "nombre": 4149
+    "moyenne": 51.92117820448465,
+    "nombre": 4168
   },
   "EBAY_ES::Super Nintendo::loose": {
     "moyenne": 78.62138782660662,
@@ -1108,24 +1108,24 @@
     "nombre": 40
   },
   "EBAY_ES::Wii U::complet": {
-    "moyenne": 106.73070609767278,
-    "nombre": 209
+    "moyenne": 103.45218515556859,
+    "nombre": 211
   },
   "EBAY_ES::Wii U::indetermine": {
-    "moyenne": 89.33724566060876,
-    "nombre": 4319
+    "moyenne": 55.15698060569761,
+    "nombre": 4337
   },
   "EBAY_ES::Wii U::loose": {
     "moyenne": 49.370957634292,
     "nombre": 12
   },
   "EBAY_ES::Wii::complet": {
-    "moyenne": 56.540465587790244,
-    "nombre": 738
+    "moyenne": 62.623545164736434,
+    "nombre": 742
   },
   "EBAY_ES::Wii::indetermine": {
-    "moyenne": 84.84571104548117,
-    "nombre": 3776
+    "moyenne": 59.23378479060766,
+    "nombre": 3792
   },
   "EBAY_ES::Wii::loose": {
     "moyenne": 11.722373023411171,
@@ -1140,24 +1140,24 @@
     "nombre": 40
   },
   "EBAY_ES::Xbox 360::complet": {
-    "moyenne": 77.83923980854321,
-    "nombre": 330
+    "moyenne": 86.40985076167247,
+    "nombre": 332
   },
   "EBAY_ES::Xbox 360::indetermine": {
-    "moyenne": 39.17551464122596,
-    "nombre": 4226
+    "moyenne": 60.794891089550326,
+    "nombre": 4244
   },
   "EBAY_ES::Xbox 360::loose": {
     "moyenne": 8.927563750000001,
     "nombre": 4
   },
   "EBAY_ES::Xbox::complet": {
-    "moyenne": 35.62801839463674,
-    "nombre": 84
+    "moyenne": 35.53081563544123,
+    "nombre": 85
   },
   "EBAY_ES::Xbox::indetermine": {
-    "moyenne": 34.58891997544136,
-    "nombre": 4472
+    "moyenne": 35.560123947590945,
+    "nombre": 4491
   },
   "EBAY_ES::Xbox::loose": {
     "moyenne": 36.6975,
@@ -1168,12 +1168,12 @@
     "nombre": 40
   },
   "EBAY_FR::Amiga::complet": {
-    "moyenne": 157.26513965378732,
-    "nombre": 1453
+    "moyenne": 155.06732888988213,
+    "nombre": 1456
   },
   "EBAY_FR::Amiga::indetermine": {
-    "moyenne": 62.87340455213169,
-    "nombre": 3186
+    "moyenne": 62.12494388187463,
+    "nombre": 3203
   },
   "EBAY_FR::Amiga::loose": {
     "moyenne": 12.0,
@@ -1184,28 +1184,28 @@
     "nombre": 40
   },
   "EBAY_FR::Atari 2600::complet": {
-    "moyenne": 70.58789978642162,
-    "nombre": 2170
+    "moyenne": 70.23264011678879,
+    "nombre": 2178
   },
   "EBAY_FR::Atari 2600::indetermine": {
-    "moyenne": 36.42178755649613,
-    "nombre": 2118
+    "moyenne": 37.71047244907194,
+    "nombre": 2127
   },
   "EBAY_FR::Atari 2600::loose": {
-    "moyenne": 81.33069759043941,
-    "nombre": 352
+    "moyenne": 84.0812521577286,
+    "nombre": 355
   },
   "EBAY_FR::Atari ST": {
     "moyenne": 47.476120594606286,
     "nombre": 40
   },
   "EBAY_FR::Atari ST::complet": {
-    "moyenne": 64.67473846103843,
-    "nombre": 1410
+    "moyenne": 79.3071926743792,
+    "nombre": 1416
   },
   "EBAY_FR::Atari ST::indetermine": {
-    "moyenne": 65.27449040309133,
-    "nombre": 3177
+    "moyenne": 46.925477390730414,
+    "nombre": 3191
   },
   "EBAY_FR::Atari ST::loose": {
     "moyenne": 17.883985411618905,
@@ -1216,16 +1216,16 @@
     "nombre": 40
   },
   "EBAY_FR::Dreamcast::complet": {
-    "moyenne": 117.85541967802476,
-    "nombre": 1009
+    "moyenne": 115.85209737816064,
+    "nombre": 1015
   },
   "EBAY_FR::Dreamcast::indetermine": {
-    "moyenne": 60.366296320494484,
-    "nombre": 3561
+    "moyenne": 74.17311640690328,
+    "nombre": 3574
   },
   "EBAY_FR::Dreamcast::loose": {
-    "moyenne": 44.118975512531456,
-    "nombre": 70
+    "moyenne": 40.03612918565174,
+    "nombre": 71
   },
   "EBAY_FR::Game Boy": {
     "moyenne": 79.83518885090922,
@@ -1236,12 +1236,12 @@
     "nombre": 40
   },
   "EBAY_FR::Game Boy Advance::complet": {
-    "moyenne": 158.6266422248611,
-    "nombre": 997
+    "moyenne": 178.5400029063428,
+    "nombre": 1000
   },
   "EBAY_FR::Game Boy Advance::indetermine": {
-    "moyenne": 85.89603461660298,
-    "nombre": 3610
+    "moyenne": 85.6170837240891,
+    "nombre": 3627
   },
   "EBAY_FR::Game Boy Advance::loose": {
     "moyenne": 57.62008522821127,
@@ -1252,24 +1252,24 @@
     "nombre": 40
   },
   "EBAY_FR::Game Boy Color::complet": {
-    "moyenne": 278.2915691879621,
-    "nombre": 398
+    "moyenne": 283.6808338097678,
+    "nombre": 399
   },
   "EBAY_FR::Game Boy Color::indetermine": {
-    "moyenne": 53.956435340701944,
-    "nombre": 4195
+    "moyenne": 55.65128419773695,
+    "nombre": 4214
   },
   "EBAY_FR::Game Boy Color::loose": {
     "moyenne": 90.09614374477734,
     "nombre": 47
   },
   "EBAY_FR::Game Boy::complet": {
-    "moyenne": 385.6236942133835,
-    "nombre": 980
+    "moyenne": 315.0468440691696,
+    "nombre": 982
   },
   "EBAY_FR::Game Boy::indetermine": {
-    "moyenne": 72.52461610020606,
-    "nombre": 3566
+    "moyenne": 76.61102241664925,
+    "nombre": 3584
   },
   "EBAY_FR::Game Boy::loose": {
     "moyenne": 73.29167323366332,
@@ -1280,28 +1280,28 @@
     "nombre": 40
   },
   "EBAY_FR::GameCube::complet": {
-    "moyenne": 70.82809800530619,
-    "nombre": 1127
+    "moyenne": 74.04876070675101,
+    "nombre": 1134
   },
   "EBAY_FR::GameCube::indetermine": {
-    "moyenne": 75.15489586990138,
-    "nombre": 3450
+    "moyenne": 86.41018277389928,
+    "nombre": 3462
   },
   "EBAY_FR::GameCube::loose": {
-    "moyenne": 44.199300392704416,
-    "nombre": 63
+    "moyenne": 51.84790533379875,
+    "nombre": 64
   },
   "EBAY_FR::Master System": {
     "moyenne": 27.258737213123332,
     "nombre": 40
   },
   "EBAY_FR::Master System::complet": {
-    "moyenne": 37.82360774993397,
-    "nombre": 1754
+    "moyenne": 42.167965873327596,
+    "nombre": 1760
   },
   "EBAY_FR::Master System::indetermine": {
-    "moyenne": 27.08065879145157,
-    "nombre": 2792
+    "moyenne": 18.091420796907574,
+    "nombre": 2806
   },
   "EBAY_FR::Master System::loose": {
     "moyenne": 29.826228110348353,
@@ -1312,12 +1312,12 @@
     "nombre": 40
   },
   "EBAY_FR::Mega Drive::complet": {
-    "moyenne": 104.33211622440166,
-    "nombre": 1969
+    "moyenne": 85.89029042394323,
+    "nombre": 1977
   },
   "EBAY_FR::Mega Drive::indetermine": {
-    "moyenne": 90.18509744943364,
-    "nombre": 2614
+    "moyenne": 87.44726708980622,
+    "nombre": 2626
   },
   "EBAY_FR::Mega Drive::loose": {
     "moyenne": 23.489046874971354,
@@ -1328,12 +1328,12 @@
     "nombre": 40
   },
   "EBAY_FR::NES::complet": {
-    "moyenne": 91.55941927990322,
-    "nombre": 1077
+    "moyenne": 87.47984746936415,
+    "nombre": 1084
   },
   "EBAY_FR::NES::indetermine": {
-    "moyenne": 44.616031813973684,
-    "nombre": 3463
+    "moyenne": 37.59480140919927,
+    "nombre": 3476
   },
   "EBAY_FR::NES::loose": {
     "moyenne": 24.86403760891731,
@@ -1344,12 +1344,12 @@
     "nombre": 40
   },
   "EBAY_FR::Neo Geo::complet": {
-    "moyenne": 213.13933292964848,
-    "nombre": 1436
+    "moyenne": 201.4824194798412,
+    "nombre": 1441
   },
   "EBAY_FR::Neo Geo::indetermine": {
-    "moyenne": 186.17979071668077,
-    "nombre": 3188
+    "moyenne": 223.0423185901559,
+    "nombre": 3203
   },
   "EBAY_FR::Neo Geo::loose": {
     "moyenne": 332.4800381817523,
@@ -1360,12 +1360,12 @@
     "nombre": 40
   },
   "EBAY_FR::Nintendo 3DS::complet": {
-    "moyenne": 133.96039539324212,
-    "nombre": 622
+    "moyenne": 142.92113567161744,
+    "nombre": 624
   },
   "EBAY_FR::Nintendo 3DS::indetermine": {
-    "moyenne": 172.43851509923076,
-    "nombre": 3992
+    "moyenne": 176.2285577287285,
+    "nombre": 4010
   },
   "EBAY_FR::Nintendo 3DS::loose": {
     "moyenne": 69.2302288736587,
@@ -1376,12 +1376,12 @@
     "nombre": 40
   },
   "EBAY_FR::Nintendo 64::complet": {
-    "moyenne": 111.37911695181073,
-    "nombre": 1436
+    "moyenne": 115.97287141536565,
+    "nombre": 1442
   },
   "EBAY_FR::Nintendo 64::indetermine": {
-    "moyenne": 49.85071603679704,
-    "nombre": 3105
+    "moyenne": 48.6996353237392,
+    "nombre": 3119
   },
   "EBAY_FR::Nintendo 64::loose": {
     "moyenne": 28.33876119418939,
@@ -1392,12 +1392,12 @@
     "nombre": 40
   },
   "EBAY_FR::Nintendo DS::complet": {
-    "moyenne": 86.47667700204296,
-    "nombre": 494
+    "moyenne": 78.29017545173652,
+    "nombre": 495
   },
   "EBAY_FR::Nintendo DS::indetermine": {
-    "moyenne": 35.2333213266161,
-    "nombre": 4083
+    "moyenne": 45.20135378009041,
+    "nombre": 4102
   },
   "EBAY_FR::Nintendo DS::loose": {
     "moyenne": 44.42717751676964,
@@ -1408,12 +1408,12 @@
     "nombre": 40
   },
   "EBAY_FR::PS Vita::complet": {
-    "moyenne": 321.9442944873774,
-    "nombre": 534
+    "moyenne": 369.1951503142708,
+    "nombre": 535
   },
   "EBAY_FR::PS Vita::indetermine": {
-    "moyenne": 116.91829730094068,
-    "nombre": 4008
+    "moyenne": 96.18666523078866,
+    "nombre": 4027
   },
   "EBAY_FR::PS Vita::loose": {
     "moyenne": 162.83599999999998,
@@ -1424,24 +1424,24 @@
     "nombre": 40
   },
   "EBAY_FR::PSP::complet": {
-    "moyenne": 88.52773184112245,
-    "nombre": 245
+    "moyenne": 89.39357206495407,
+    "nombre": 246
   },
   "EBAY_FR::PSP::indetermine": {
-    "moyenne": 72.46359553289564,
-    "nombre": 4395
+    "moyenne": 57.65881970598783,
+    "nombre": 4414
   },
   "EBAY_FR::PlayStation 1": {
     "moyenne": 75.5492755050273,
     "nombre": 40
   },
   "EBAY_FR::PlayStation 1::complet": {
-    "moyenne": 59.33828275334531,
-    "nombre": 1449
+    "moyenne": 59.830474220411446,
+    "nombre": 1454
   },
   "EBAY_FR::PlayStation 1::indetermine": {
-    "moyenne": 75.68971417701681,
-    "nombre": 3123
+    "moyenne": 59.48014123853395,
+    "nombre": 3138
   },
   "EBAY_FR::PlayStation 1::loose": {
     "moyenne": 35.56684592724962,
@@ -1452,28 +1452,28 @@
     "nombre": 40
   },
   "EBAY_FR::PlayStation 2::complet": {
-    "moyenne": 130.58375391655431,
-    "nombre": 944
+    "moyenne": 141.30219082907118,
+    "nombre": 945
   },
   "EBAY_FR::PlayStation 2::indetermine": {
-    "moyenne": 66.18733582850125,
-    "nombre": 3672
+    "moyenne": 75.86679518742955,
+    "nombre": 3690
   },
   "EBAY_FR::PlayStation 2::loose": {
-    "moyenne": 49.17715110641714,
-    "nombre": 24
+    "moyenne": 50.04907844045457,
+    "nombre": 25
   },
   "EBAY_FR::PlayStation 3": {
     "moyenne": 76.74061327013229,
     "nombre": 40
   },
   "EBAY_FR::PlayStation 3::complet": {
-    "moyenne": 156.42614027119407,
-    "nombre": 473
+    "moyenne": 154.58534169744001,
+    "nombre": 477
   },
   "EBAY_FR::PlayStation 3::indetermine": {
-    "moyenne": 112.3515217065484,
-    "nombre": 4166
+    "moyenne": 98.91380180680366,
+    "nombre": 4182
   },
   "EBAY_FR::PlayStation 3::loose": {
     "moyenne": 79.95,
@@ -1484,12 +1484,12 @@
     "nombre": 40
   },
   "EBAY_FR::Saturn::complet": {
-    "moyenne": 57.268249462665736,
-    "nombre": 1771
+    "moyenne": 55.85104826144001,
+    "nombre": 1778
   },
   "EBAY_FR::Saturn::indetermine": {
-    "moyenne": 141.12344223779027,
-    "nombre": 2864
+    "moyenne": 125.18203536699392,
+    "nombre": 2877
   },
   "EBAY_FR::Saturn::loose": {
     "moyenne": 56.4335,
@@ -1500,12 +1500,12 @@
     "nombre": 40
   },
   "EBAY_FR::Super Nintendo::complet": {
-    "moyenne": 197.80350671180778,
-    "nombre": 874
+    "moyenne": 188.26776344499984,
+    "nombre": 881
   },
   "EBAY_FR::Super Nintendo::indetermine": {
-    "moyenne": 77.1887003152827,
-    "nombre": 3678
+    "moyenne": 68.23726338477883,
+    "nombre": 3691
   },
   "EBAY_FR::Super Nintendo::loose": {
     "moyenne": 79.87449288198017,
@@ -1520,24 +1520,24 @@
     "nombre": 40
   },
   "EBAY_FR::Wii U::complet": {
-    "moyenne": 199.20111960822442,
-    "nombre": 402
+    "moyenne": 191.79305891694213,
+    "nombre": 404
   },
   "EBAY_FR::Wii U::indetermine": {
-    "moyenne": 60.957052999084176,
-    "nombre": 4033
+    "moyenne": 76.07342936986849,
+    "nombre": 4050
   },
   "EBAY_FR::Wii U::loose": {
-    "moyenne": 151.59992307410698,
-    "nombre": 205
+    "moyenne": 153.76893461299093,
+    "nombre": 206
   },
   "EBAY_FR::Wii::complet": {
-    "moyenne": 109.71654198299859,
-    "nombre": 819
+    "moyenne": 84.43729634530901,
+    "nombre": 822
   },
   "EBAY_FR::Wii::indetermine": {
-    "moyenne": 46.07949969228725,
-    "nombre": 3777
+    "moyenne": 64.7298127053654,
+    "nombre": 3794
   },
   "EBAY_FR::Wii::loose": {
     "moyenne": 20.291322354916364,
@@ -1552,24 +1552,24 @@
     "nombre": 40
   },
   "EBAY_FR::Xbox 360::complet": {
-    "moyenne": 92.58749478622828,
-    "nombre": 693
+    "moyenne": 89.3160209236526,
+    "nombre": 700
   },
   "EBAY_FR::Xbox 360::indetermine": {
-    "moyenne": 98.90116789179288,
-    "nombre": 3927
+    "moyenne": 88.23202989068565,
+    "nombre": 3940
   },
   "EBAY_FR::Xbox 360::loose": {
     "moyenne": 25.59657255896961,
     "nombre": 20
   },
   "EBAY_FR::Xbox::complet": {
-    "moyenne": 99.70653506436176,
-    "nombre": 781
+    "moyenne": 93.62114636152484,
+    "nombre": 786
   },
   "EBAY_FR::Xbox::indetermine": {
-    "moyenne": 64.7928691832823,
-    "nombre": 3856
+    "moyenne": 81.5286055699579,
+    "nombre": 3871
   },
   "EBAY_FR::Xbox::loose": {
     "moyenne": 18.19395,
@@ -1580,12 +1580,12 @@
     "nombre": 40
   },
   "EBAY_GB::Amiga::complet": {
-    "moyenne": 153.26258730398453,
-    "nombre": 1262
+    "moyenne": 157.69951142805948,
+    "nombre": 1265
   },
   "EBAY_GB::Amiga::indetermine": {
-    "moyenne": 59.9570985290021,
-    "nombre": 3166
+    "moyenne": 62.0573275600758,
+    "nombre": 3183
   },
   "EBAY_GB::Amiga::loose": {
     "moyenne": 22.667999439972856,
@@ -1596,12 +1596,12 @@
     "nombre": 40
   },
   "EBAY_GB::Atari 2600::complet": {
-    "moyenne": 80.98346068815474,
-    "nombre": 886
+    "moyenne": 60.243274262380076,
+    "nombre": 895
   },
   "EBAY_GB::Atari 2600::indetermine": {
-    "moyenne": 50.78445730311386,
-    "nombre": 3483
+    "moyenne": 56.971124515409706,
+    "nombre": 3494
   },
   "EBAY_GB::Atari 2600::loose": {
     "moyenne": 35.74841657240595,
@@ -1612,12 +1612,12 @@
     "nombre": 40
   },
   "EBAY_GB::Atari ST::complet": {
-    "moyenne": 110.52930115321378,
-    "nombre": 1339
+    "moyenne": 100.62425910234333,
+    "nombre": 1344
   },
   "EBAY_GB::Atari ST::indetermine": {
-    "moyenne": 52.1079647070784,
-    "nombre": 3023
+    "moyenne": 46.54189277805453,
+    "nombre": 3038
   },
   "EBAY_GB::Atari ST::loose": {
     "moyenne": 4.38940828318171,
@@ -1628,16 +1628,16 @@
     "nombre": 40
   },
   "EBAY_GB::Dreamcast::complet": {
-    "moyenne": 124.16494531996015,
-    "nombre": 843
+    "moyenne": 124.45199704462054,
+    "nombre": 846
   },
   "EBAY_GB::Dreamcast::indetermine": {
-    "moyenne": 49.27038367353548,
-    "nombre": 3480
+    "moyenne": 63.5038560288657,
+    "nombre": 3496
   },
   "EBAY_GB::Dreamcast::loose": {
-    "moyenne": 21.18432023721197,
-    "nombre": 137
+    "moyenne": 18.605172201630175,
+    "nombre": 138
   },
   "EBAY_GB::Game Boy": {
     "moyenne": 90.85223487272297,
@@ -1648,12 +1648,12 @@
     "nombre": 40
   },
   "EBAY_GB::Game Boy Advance::complet": {
-    "moyenne": 79.11923031760142,
-    "nombre": 293
+    "moyenne": 88.74983481879697,
+    "nombre": 296
   },
   "EBAY_GB::Game Boy Advance::indetermine": {
-    "moyenne": 88.66221135221814,
-    "nombre": 4120
+    "moyenne": 90.8413342596756,
+    "nombre": 4137
   },
   "EBAY_GB::Game Boy Advance::loose": {
     "moyenne": 20.16247499668238,
@@ -1664,24 +1664,24 @@
     "nombre": 40
   },
   "EBAY_GB::Game Boy Color::complet": {
-    "moyenne": 85.20738264178249,
-    "nombre": 103
+    "moyenne": 85.20330895868786,
+    "nombre": 105
   },
   "EBAY_GB::Game Boy Color::indetermine": {
-    "moyenne": 80.09158395886202,
-    "nombre": 4329
+    "moyenne": 65.86364702809898,
+    "nombre": 4347
   },
   "EBAY_GB::Game Boy Color::loose": {
     "moyenne": 48.812375065625,
     "nombre": 8
   },
   "EBAY_GB::Game Boy::complet": {
-    "moyenne": 105.20183295640608,
-    "nombre": 381
+    "moyenne": 80.59188359561995,
+    "nombre": 386
   },
   "EBAY_GB::Game Boy::indetermine": {
-    "moyenne": 72.84154316822051,
-    "nombre": 3920
+    "moyenne": 56.36386555089744,
+    "nombre": 3935
   },
   "EBAY_GB::Game Boy::loose": {
     "moyenne": 31.12529657853236,
@@ -1692,28 +1692,28 @@
     "nombre": 40
   },
   "EBAY_GB::GameCube::complet": {
-    "moyenne": 56.162960724472015,
-    "nombre": 783
+    "moyenne": 47.10445075491638,
+    "nombre": 786
   },
   "EBAY_GB::GameCube::indetermine": {
-    "moyenne": 223.36603777897142,
-    "nombre": 3658
+    "moyenne": 223.46081406009304,
+    "nombre": 3674
   },
   "EBAY_GB::GameCube::loose": {
-    "moyenne": 47.83719228777473,
-    "nombre": 59
+    "moyenne": 49.66011344460852,
+    "nombre": 60
   },
   "EBAY_GB::Master System": {
     "moyenne": 110.09094769572793,
     "nombre": 40
   },
   "EBAY_GB::Master System::complet": {
-    "moyenne": 178.66347994201797,
-    "nombre": 1291
+    "moyenne": 160.4760217432902,
+    "nombre": 1297
   },
   "EBAY_GB::Master System::indetermine": {
-    "moyenne": 34.95907610889335,
-    "nombre": 3129
+    "moyenne": 31.217858911702756,
+    "nombre": 3143
   },
   "EBAY_GB::Master System::loose": {
     "moyenne": 76.78609770729216,
@@ -1724,12 +1724,12 @@
     "nombre": 40
   },
   "EBAY_GB::Mega Drive::complet": {
-    "moyenne": 96.12454622275635,
-    "nombre": 1444
+    "moyenne": 100.21865021919271,
+    "nombre": 1448
   },
   "EBAY_GB::Mega Drive::indetermine": {
-    "moyenne": 50.28404965005784,
-    "nombre": 2985
+    "moyenne": 50.63682525428124,
+    "nombre": 3001
   },
   "EBAY_GB::Mega Drive::loose": {
     "moyenne": 10.650137103241601,
@@ -1740,12 +1740,12 @@
     "nombre": 40
   },
   "EBAY_GB::NES::complet": {
-    "moyenne": 67.53305951006763,
-    "nombre": 1398
+    "moyenne": 69.49317225351368,
+    "nombre": 1406
   },
   "EBAY_GB::NES::indetermine": {
-    "moyenne": 78.82785712438157,
-    "nombre": 3005
+    "moyenne": 82.41324769581763,
+    "nombre": 3017
   },
   "EBAY_GB::NES::loose": {
     "moyenne": 22.503144702423185,
@@ -1756,12 +1756,12 @@
     "nombre": 40
   },
   "EBAY_GB::Neo Geo::complet": {
-    "moyenne": 164.35892070415113,
-    "nombre": 674
+    "moyenne": 171.2145800794481,
+    "nombre": 679
   },
   "EBAY_GB::Neo Geo::indetermine": {
-    "moyenne": 226.22118826229757,
-    "nombre": 3730
+    "moyenne": 193.9582988034314,
+    "nombre": 3745
   },
   "EBAY_GB::Neo Geo::loose": {
     "moyenne": 26.089889296775006,
@@ -1772,60 +1772,60 @@
     "nombre": 40
   },
   "EBAY_GB::Nintendo 3DS::complet": {
-    "moyenne": 127.93541781885666,
-    "nombre": 225
+    "moyenne": 127.49360514602816,
+    "nombre": 226
   },
   "EBAY_GB::Nintendo 3DS::indetermine": {
-    "moyenne": 106.21429969938885,
-    "nombre": 4196
+    "moyenne": 125.17305925479633,
+    "nombre": 4214
   },
   "EBAY_GB::Nintendo 3DS::loose": {
-    "moyenne": 67.21947949414299,
-    "nombre": 19
+    "moyenne": 72.37355757002155,
+    "nombre": 20
   },
   "EBAY_GB::Nintendo 64": {
     "moyenne": 72.4165790345875,
     "nombre": 40
   },
   "EBAY_GB::Nintendo 64::complet": {
-    "moyenne": 66.08393067522833,
-    "nombre": 839
+    "moyenne": 64.3577439259246,
+    "nombre": 842
   },
   "EBAY_GB::Nintendo 64::indetermine": {
-    "moyenne": 230.65417978774772,
-    "nombre": 3581
+    "moyenne": 120.27680887756532,
+    "nombre": 3597
   },
   "EBAY_GB::Nintendo 64::loose": {
-    "moyenne": 25.29877525383295,
-    "nombre": 80
+    "moyenne": 24.502458965758006,
+    "nombre": 81
   },
   "EBAY_GB::Nintendo DS": {
     "moyenne": 34.90470176880409,
     "nombre": 40
   },
   "EBAY_GB::Nintendo DS::complet": {
-    "moyenne": 66.20001644833776,
-    "nombre": 117
+    "moyenne": 62.451736883924035,
+    "nombre": 119
   },
   "EBAY_GB::Nintendo DS::indetermine": {
-    "moyenne": 26.158652354499452,
-    "nombre": 4259
+    "moyenne": 26.844929443309205,
+    "nombre": 4276
   },
   "EBAY_GB::Nintendo DS::loose": {
-    "moyenne": 35.90855258579703,
-    "nombre": 64
+    "moyenne": 35.920769697927476,
+    "nombre": 65
   },
   "EBAY_GB::PS Vita": {
     "moyenne": 118.87442023758774,
     "nombre": 40
   },
   "EBAY_GB::PS Vita::complet": {
-    "moyenne": 175.2520030393273,
-    "nombre": 629
+    "moyenne": 180.79057219591397,
+    "nombre": 631
   },
   "EBAY_GB::PS Vita::indetermine": {
-    "moyenne": 111.22688539503645,
-    "nombre": 3806
+    "moyenne": 103.87125743200886,
+    "nombre": 3824
   },
   "EBAY_GB::PS Vita::loose": {
     "moyenne": 26.4565,
@@ -1836,12 +1836,12 @@
     "nombre": 40
   },
   "EBAY_GB::PSP::complet": {
-    "moyenne": 90.74097746761109,
-    "nombre": 260
+    "moyenne": 82.52833084746942,
+    "nombre": 261
   },
   "EBAY_GB::PSP::indetermine": {
-    "moyenne": 30.43040932004267,
-    "nombre": 4174
+    "moyenne": 39.9846512978265,
+    "nombre": 4193
   },
   "EBAY_GB::PSP::loose": {
     "moyenne": 85.3410710625,
@@ -1852,16 +1852,16 @@
     "nombre": 40
   },
   "EBAY_GB::PlayStation 1::complet": {
-    "moyenne": 34.40748675829097,
-    "nombre": 595
+    "moyenne": 37.63818905543545,
+    "nombre": 598
   },
   "EBAY_GB::PlayStation 1::indetermine": {
-    "moyenne": 84.24286981705468,
-    "nombre": 3774
+    "moyenne": 74.20700818798959,
+    "nombre": 3789
   },
   "EBAY_GB::PlayStation 1::loose": {
-    "moyenne": 29.752933422830388,
-    "nombre": 131
+    "moyenne": 32.89971939799496,
+    "nombre": 133
   },
   "EBAY_GB::PlayStation 2": {
     "moyenne": 77.48387639293698,
@@ -1872,8 +1872,8 @@
     "nombre": 311
   },
   "EBAY_GB::PlayStation 2::indetermine": {
-    "moyenne": 68.60123268088884,
-    "nombre": 4188
+    "moyenne": 69.11326789704758,
+    "nombre": 4208
   },
   "EBAY_GB::PlayStation 2::loose": {
     "moyenne": 44.38,
@@ -1884,28 +1884,28 @@
     "nombre": 40
   },
   "EBAY_GB::PlayStation 3::complet": {
-    "moyenne": 93.2942555545064,
-    "nombre": 379
+    "moyenne": 90.54861722133045,
+    "nombre": 380
   },
   "EBAY_GB::PlayStation 3::indetermine": {
-    "moyenne": 78.19821869149017,
-    "nombre": 4092
+    "moyenne": 79.58217177160293,
+    "nombre": 4110
   },
   "EBAY_GB::PlayStation 3::loose": {
-    "moyenne": 6.099691096592319,
-    "nombre": 29
+    "moyenne": 5.783237432103471,
+    "nombre": 30
   },
   "EBAY_GB::Saturn": {
     "moyenne": 34.6283283574394,
     "nombre": 40
   },
   "EBAY_GB::Saturn::complet": {
-    "moyenne": 154.8031178867645,
-    "nombre": 1642
+    "moyenne": 183.89842179538434,
+    "nombre": 1652
   },
   "EBAY_GB::Saturn::indetermine": {
-    "moyenne": 359.54163848375606,
-    "nombre": 2797
+    "moyenne": 113.30628248815609,
+    "nombre": 2807
   },
   "EBAY_GB::Saturn::loose": {
     "moyenne": 19.957716469631535,
@@ -1916,12 +1916,12 @@
     "nombre": 40
   },
   "EBAY_GB::Super Nintendo::complet": {
-    "moyenne": 173.14730488110484,
-    "nombre": 1453
+    "moyenne": 180.29234223955342,
+    "nombre": 1458
   },
   "EBAY_GB::Super Nintendo::indetermine": {
-    "moyenne": 99.10031112620622,
-    "nombre": 2986
+    "moyenne": 95.1506961898332,
+    "nombre": 3001
   },
   "EBAY_GB::Super Nintendo::loose": {
     "moyenne": 43.27773052894825,
@@ -1936,12 +1936,12 @@
     "nombre": 40
   },
   "EBAY_GB::Wii U::complet": {
-    "moyenne": 96.88757398114447,
-    "nombre": 354
+    "moyenne": 89.64849720137688,
+    "nombre": 356
   },
   "EBAY_GB::Wii U::indetermine": {
-    "moyenne": 147.3580317021276,
-    "nombre": 4077
+    "moyenne": 89.64402362237956,
+    "nombre": 4095
   },
   "EBAY_GB::Wii U::loose": {
     "moyenne": 11.122728338002345,
@@ -1952,8 +1952,8 @@
     "nombre": 187
   },
   "EBAY_GB::Wii::indetermine": {
-    "moyenne": 57.31461733526044,
-    "nombre": 4245
+    "moyenne": 68.40842977853144,
+    "nombre": 4265
   },
   "EBAY_GB::Wii::loose": {
     "moyenne": 7.672121446257813,
@@ -1972,20 +1972,20 @@
     "nombre": 172
   },
   "EBAY_GB::Xbox 360::indetermine": {
-    "moyenne": 49.91736848997698,
-    "nombre": 4136
+    "moyenne": 33.041481693161444,
+    "nombre": 4155
   },
   "EBAY_GB::Xbox 360::loose": {
-    "moyenne": 3.025355630210636,
-    "nombre": 132
+    "moyenne": 3.0200522856790406,
+    "nombre": 133
   },
   "EBAY_GB::Xbox::complet": {
     "moyenne": 108.56532399270348,
     "nombre": 165
   },
   "EBAY_GB::Xbox::indetermine": {
-    "moyenne": 65.34072179170204,
-    "nombre": 4267
+    "moyenne": 61.113505726786755,
+    "nombre": 4287
   },
   "EBAY_GB::Xbox::loose": {
     "moyenne": 70.42530106283596,
@@ -1996,24 +1996,24 @@
     "nombre": 40
   },
   "EBAY_IT::Amiga::complet": {
-    "moyenne": 70.94839809165576,
-    "nombre": 1646
+    "moyenne": 69.09686762122129,
+    "nombre": 1648
   },
   "EBAY_IT::Amiga::indetermine": {
-    "moyenne": 99.0469834347211,
-    "nombre": 2854
+    "moyenne": 105.38736274418243,
+    "nombre": 2872
   },
   "EBAY_IT::Atari 2600": {
     "moyenne": 74.14869613688967,
     "nombre": 40
   },
   "EBAY_IT::Atari 2600::complet": {
-    "moyenne": 67.97974379130544,
-    "nombre": 761
+    "moyenne": 80.82850976259112,
+    "nombre": 766
   },
   "EBAY_IT::Atari 2600::indetermine": {
-    "moyenne": 88.20720621183426,
-    "nombre": 3752
+    "moyenne": 90.1839955319289,
+    "nombre": 3767
   },
   "EBAY_IT::Atari 2600::loose": {
     "moyenne": 27.8146133625,
@@ -2024,12 +2024,12 @@
     "nombre": 40
   },
   "EBAY_IT::Atari ST::complet": {
-    "moyenne": 100.8453506102433,
-    "nombre": 1683
+    "moyenne": 130.35568696849904,
+    "nombre": 1689
   },
   "EBAY_IT::Atari ST::indetermine": {
-    "moyenne": 106.47426513571206,
-    "nombre": 2817
+    "moyenne": 83.30658718436092,
+    "nombre": 2831
   },
   "EBAY_IT::Dreamcast": {
     "moyenne": 120.2869696058971,
@@ -2040,8 +2040,8 @@
     "nombre": 913
   },
   "EBAY_IT::Dreamcast::indetermine": {
-    "moyenne": 70.83256504995771,
-    "nombre": 3593
+    "moyenne": 94.20734081443123,
+    "nombre": 3613
   },
   "EBAY_IT::Dreamcast::loose": {
     "moyenne": 77.76700134054703,
@@ -2056,12 +2056,12 @@
     "nombre": 40
   },
   "EBAY_IT::Game Boy Advance::complet": {
-    "moyenne": 144.1302904522429,
-    "nombre": 193
+    "moyenne": 142.57013485174548,
+    "nombre": 195
   },
   "EBAY_IT::Game Boy Advance::indetermine": {
-    "moyenne": 107.4175981526098,
-    "nombre": 4298
+    "moyenne": 124.12367181606268,
+    "nombre": 4316
   },
   "EBAY_IT::Game Boy Advance::loose": {
     "moyenne": 49.9,
@@ -2072,24 +2072,24 @@
     "nombre": 40
   },
   "EBAY_IT::Game Boy Color::complet": {
-    "moyenne": 244.91490998073758,
-    "nombre": 220
+    "moyenne": 243.4685224610829,
+    "nombre": 222
   },
   "EBAY_IT::Game Boy Color::indetermine": {
-    "moyenne": 45.91011328289552,
-    "nombre": 4218
+    "moyenne": 57.287642141462726,
+    "nombre": 4235
   },
   "EBAY_IT::Game Boy Color::loose": {
-    "moyenne": 81.48057033368222,
-    "nombre": 62
+    "moyenne": 81.9934847836299,
+    "nombre": 63
   },
   "EBAY_IT::Game Boy::complet": {
-    "moyenne": 181.53644361719282,
-    "nombre": 256
+    "moyenne": 166.89608051342182,
+    "nombre": 258
   },
   "EBAY_IT::Game Boy::indetermine": {
-    "moyenne": 45.81374158564029,
-    "nombre": 4187
+    "moyenne": 30.376177625786276,
+    "nombre": 4205
   },
   "EBAY_IT::Game Boy::loose": {
     "moyenne": 73.07868160404117,
@@ -2100,12 +2100,12 @@
     "nombre": 40
   },
   "EBAY_IT::GameCube::complet": {
-    "moyenne": 140.43878280218027,
-    "nombre": 630
+    "moyenne": 118.48495316661102,
+    "nombre": 635
   },
   "EBAY_IT::GameCube::indetermine": {
-    "moyenne": 100.46603811590214,
-    "nombre": 3884
+    "moyenne": 56.65847996976497,
+    "nombre": 3899
   },
   "EBAY_IT::GameCube::loose": {
     "moyenne": 193.6597573125,
@@ -2116,12 +2116,12 @@
     "nombre": 40
   },
   "EBAY_IT::Master System::complet": {
-    "moyenne": 69.73237162676551,
-    "nombre": 1618
+    "moyenne": 81.76100913119208,
+    "nombre": 1628
   },
   "EBAY_IT::Master System::indetermine": {
-    "moyenne": 96.229619246353,
-    "nombre": 2889
+    "moyenne": 83.35363552388175,
+    "nombre": 2899
   },
   "EBAY_IT::Master System::loose": {
     "moyenne": 29.9,
@@ -2132,28 +2132,28 @@
     "nombre": 40
   },
   "EBAY_IT::Mega Drive::complet": {
-    "moyenne": 110.79368646379518,
-    "nombre": 1249
+    "moyenne": 120.67061347009202,
+    "nombre": 1251
   },
   "EBAY_IT::Mega Drive::indetermine": {
-    "moyenne": 125.52940886394121,
-    "nombre": 3246
+    "moyenne": 103.45636656323862,
+    "nombre": 3261
   },
   "EBAY_IT::Mega Drive::loose": {
-    "moyenne": 25.725629865007782,
-    "nombre": 25
+    "moyenne": 24.160292440847904,
+    "nombre": 28
   },
   "EBAY_IT::NES": {
     "moyenne": 66.21543133580032,
     "nombre": 40
   },
   "EBAY_IT::NES::complet": {
-    "moyenne": 92.97309824673928,
-    "nombre": 564
+    "moyenne": 117.97697826486228,
+    "nombre": 573
   },
   "EBAY_IT::NES::indetermine": {
-    "moyenne": 94.99265338568051,
-    "nombre": 3945
+    "moyenne": 128.59620331078483,
+    "nombre": 3956
   },
   "EBAY_IT::NES::loose": {
     "moyenne": 8.210941824251568,
@@ -2164,12 +2164,12 @@
     "nombre": 40
   },
   "EBAY_IT::Neo Geo::complet": {
-    "moyenne": 501.9496728986624,
-    "nombre": 932
+    "moyenne": 509.18146786889105,
+    "nombre": 935
   },
   "EBAY_IT::Neo Geo::indetermine": {
-    "moyenne": 445.5602203735185,
-    "nombre": 3562
+    "moyenne": 354.9339808620753,
+    "nombre": 3579
   },
   "EBAY_IT::Neo Geo::loose": {
     "moyenne": 184.5565625,
@@ -2180,12 +2180,12 @@
     "nombre": 40
   },
   "EBAY_IT::Nintendo 3DS::complet": {
-    "moyenne": 210.98775086405055,
-    "nombre": 332
+    "moyenne": 165.54926499938506,
+    "nombre": 335
   },
   "EBAY_IT::Nintendo 3DS::indetermine": {
-    "moyenne": 176.15620412779418,
-    "nombre": 4157
+    "moyenne": 201.30604576933084,
+    "nombre": 4174
   },
   "EBAY_IT::Nintendo 3DS::loose": {
     "moyenne": 143.93531541873048,
@@ -2200,8 +2200,8 @@
     "nombre": 485
   },
   "EBAY_IT::Nintendo 64::indetermine": {
-    "moyenne": 123.5847056523812,
-    "nombre": 4049
+    "moyenne": 91.97290274133653,
+    "nombre": 4069
   },
   "EBAY_IT::Nintendo 64::loose": {
     "moyenne": 47.474913603124996,
@@ -2212,12 +2212,12 @@
     "nombre": 40
   },
   "EBAY_IT::Nintendo DS::complet": {
-    "moyenne": 96.44216395873043,
-    "nombre": 307
+    "moyenne": 96.10583936492087,
+    "nombre": 308
   },
   "EBAY_IT::Nintendo DS::indetermine": {
-    "moyenne": 48.32000309401824,
-    "nombre": 4187
+    "moyenne": 33.12040622875001,
+    "nombre": 4206
   },
   "EBAY_IT::Nintendo DS::loose": {
     "moyenne": 34.9134,
@@ -2228,24 +2228,24 @@
     "nombre": 40
   },
   "EBAY_IT::PS Vita::complet": {
-    "moyenne": 268.3669845179015,
-    "nombre": 490
+    "moyenne": 261.8561385869978,
+    "nombre": 494
   },
   "EBAY_IT::PS Vita::indetermine": {
-    "moyenne": 178.576797454916,
-    "nombre": 4010
+    "moyenne": 178.53461554192626,
+    "nombre": 4026
   },
   "EBAY_IT::PSP": {
     "moyenne": 95.45871137042361,
     "nombre": 40
   },
   "EBAY_IT::PSP::complet": {
-    "moyenne": 116.97262168171238,
-    "nombre": 333
+    "moyenne": 130.83534416503718,
+    "nombre": 335
   },
   "EBAY_IT::PSP::indetermine": {
-    "moyenne": 61.34364595537342,
-    "nombre": 4165
+    "moyenne": 68.79124678657907,
+    "nombre": 4183
   },
   "EBAY_IT::PSP::loose": {
     "moyenne": 61.6075,
@@ -2256,12 +2256,12 @@
     "nombre": 40
   },
   "EBAY_IT::PlayStation 1::complet": {
-    "moyenne": 77.74448939654376,
-    "nombre": 947
+    "moyenne": 84.78798551315651,
+    "nombre": 954
   },
   "EBAY_IT::PlayStation 1::indetermine": {
-    "moyenne": 48.70193354656362,
-    "nombre": 3592
+    "moyenne": 48.89893929487752,
+    "nombre": 3605
   },
   "EBAY_IT::PlayStation 1::loose": {
     "moyenne": 24.9,
@@ -2272,12 +2272,12 @@
     "nombre": 40
   },
   "EBAY_IT::PlayStation 2::complet": {
-    "moyenne": 73.06519203537623,
-    "nombre": 1330
+    "moyenne": 72.90689630081475,
+    "nombre": 1336
   },
   "EBAY_IT::PlayStation 2::indetermine": {
-    "moyenne": 47.45178799681579,
-    "nombre": 3207
+    "moyenne": 93.83984889367274,
+    "nombre": 3221
   },
   "EBAY_IT::PlayStation 2::loose": {
     "moyenne": 39.9,
@@ -2288,12 +2288,12 @@
     "nombre": 40
   },
   "EBAY_IT::PlayStation 3::complet": {
-    "moyenne": 80.96528631717322,
-    "nombre": 485
+    "moyenne": 101.45833611560391,
+    "nombre": 489
   },
   "EBAY_IT::PlayStation 3::indetermine": {
-    "moyenne": 71.89616902266991,
-    "nombre": 4034
+    "moyenne": 66.57596924051387,
+    "nombre": 4050
   },
   "EBAY_IT::PlayStation 3::loose": {
     "moyenne": 249.99,
@@ -2304,28 +2304,28 @@
     "nombre": 40
   },
   "EBAY_IT::Saturn::complet": {
-    "moyenne": 248.1791470365924,
-    "nombre": 1133
+    "moyenne": 284.5735830591931,
+    "nombre": 1140
   },
   "EBAY_IT::Saturn::indetermine": {
-    "moyenne": 153.38552991493503,
-    "nombre": 3367
+    "moyenne": 90.71497158399214,
+    "nombre": 3379
   },
   "EBAY_IT::Saturn::loose": {
-    "moyenne": 149.95214431033097,
-    "nombre": 20
+    "moyenne": 149.94432266378132,
+    "nombre": 21
   },
   "EBAY_IT::Super Nintendo": {
     "moyenne": 283.7834989203142,
     "nombre": 40
   },
   "EBAY_IT::Super Nintendo::complet": {
-    "moyenne": 126.94847349398303,
-    "nombre": 435
+    "moyenne": 122.89120246988557,
+    "nombre": 436
   },
   "EBAY_IT::Super Nintendo::indetermine": {
-    "moyenne": 111.46180242403507,
-    "nombre": 4081
+    "moyenne": 97.71090825822802,
+    "nombre": 4100
   },
   "EBAY_IT::Super Nintendo::loose": {
     "moyenne": 27.0409,
@@ -2344,20 +2344,20 @@
     "nombre": 383
   },
   "EBAY_IT::Wii U::indetermine": {
-    "moyenne": 70.1532054756672,
-    "nombre": 4106
+    "moyenne": 60.33943388440515,
+    "nombre": 4126
   },
   "EBAY_IT::Wii U::loose": {
     "moyenne": 49.4578139891482,
     "nombre": 11
   },
   "EBAY_IT::Wii::complet": {
-    "moyenne": 68.41233173311397,
-    "nombre": 1319
+    "moyenne": 70.88980798154415,
+    "nombre": 1327
   },
   "EBAY_IT::Wii::indetermine": {
-    "moyenne": 141.0381494941356,
-    "nombre": 3181
+    "moyenne": 159.7348019337874,
+    "nombre": 3193
   },
   "EBAY_IT::Xbox": {
     "moyenne": 75.37250332480339,
@@ -2368,19 +2368,19 @@
     "nombre": 40
   },
   "EBAY_IT::Xbox 360::complet": {
-    "moyenne": 85.87378941964542,
-    "nombre": 415
+    "moyenne": 89.66639360125296,
+    "nombre": 420
   },
   "EBAY_IT::Xbox 360::indetermine": {
-    "moyenne": 46.31170359230207,
-    "nombre": 4085
+    "moyenne": 33.588051963123476,
+    "nombre": 4100
   },
   "EBAY_IT::Xbox::complet": {
-    "moyenne": 44.6673472079382,
-    "nombre": 234
+    "moyenne": 44.51890835773535,
+    "nombre": 236
   },
   "EBAY_IT::Xbox::indetermine": {
-    "moyenne": 45.45899995884521,
-    "nombre": 4266
+    "moyenne": 49.94556556246724,
+    "nombre": 4284
   }
 }
